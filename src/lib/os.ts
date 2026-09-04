@@ -1,4 +1,4 @@
-import type { OsId, PathTooltipContent } from "./types";
+import type { OsId } from "./types";
 
 export const OS_OPTIONS: { id: OsId; label: string }[] = [
   { id: "windows", label: "Windows" },
@@ -32,28 +32,6 @@ export function defaultPath(os: OsId): string {
   if (os === "windows") return "C:\\Users\\Alex\\Videos\\clip.mp4";
   if (os === "linux") return "/home/alex/Videos/clip.mp4";
   return "/Users/alex/Movies/clip.mp4";
-}
-
-export function pathTooltip(os: OsId): PathTooltipContent {
-  if (os === "windows") {
-    return {
-      steps: ["Shift + right-click the file", "Copy as path"],
-      menu: ["Open with", "Copy", "Copy as path"],
-      highlight: 2,
-    };
-  }
-  if (os === "macos") {
-    return {
-      steps: ["⌥ (Option) + right-click the file", 'Copy "clip.mp4" as Pathname'],
-      menu: ["Open With", "Duplicate", 'Copy "clip.mp4" as Pathname'],
-      highlight: 2,
-    };
-  }
-  return {
-    steps: ["Right-click the file (Nautilus, Dolphin…)", "Copy location"],
-    menu: ["Open with", "Cut", "Copy location"],
-    highlight: 2,
-  };
 }
 
 export function shellName(os: OsId): string {

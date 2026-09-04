@@ -1,0 +1,56 @@
+const en = {
+  app: {
+    subtitle:
+      "ExifTool command generator to change a video's date and time (MP4, MOV) — Windows, macOS or Linux, no software to install.",
+    toggleTheme: "Toggle theme",
+  },
+  language: {
+    selectorLabel: "Change language",
+    searchPlaceholder: "Search a language…",
+    noResults: "No languages found",
+  },
+  os: {
+    ariaLabel: "Operating system",
+  },
+  filePath: {
+    label: "File path",
+    getPath: "Get the path:",
+  },
+  pathTooltip: {
+    windows: {
+      steps: ["Shift + right-click the file", "Copy as path"],
+      menu: ["Open with", "Copy", "Copy as path"],
+    },
+    macos: {
+      steps: ["⌥ (Option) + right-click the file", 'Copy "clip.mp4" as Pathname'],
+      menu: ["Open With", "Duplicate", 'Copy "clip.mp4" as Pathname'],
+    },
+    linux: {
+      steps: ["Right-click the file (Nautilus, Dolphin…)", "Copy location"],
+      menu: ["Open with", "Cut", "Copy location"],
+    },
+  },
+  date: { label: "Date" },
+  time: { label: "Time" },
+  advanced: {
+    title: "Advanced options",
+    dateTagsToModify: "Date tags to modify",
+    forceUtc: "Force UTC time (-api QuickTimeUTC)",
+    forceUtcHelp: "Recommended for MP4/MOV videos: preserves the real timestamp expected by QuickTime.",
+    overwrite: "Overwrite the original file (no _original copy)",
+    editLocation: "Edit location",
+    latitude: "Latitude",
+    longitude: "Longitude",
+  },
+  command: {
+    copy: "Copy",
+    copied: "Copied!",
+  },
+  footer: {
+    desktopComingSoon: "A desktop app with a graphical interface is coming soon.",
+  },
+} satisfies Record<string, unknown>;
+
+export type Translation = typeof en;
+
+export default en;
