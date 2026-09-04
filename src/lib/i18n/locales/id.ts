@@ -3,7 +3,7 @@ import type { Translation } from "./en";
 const id: Translation = {
   app: {
     subtitle:
-      "Generator perintah ExifTool untuk mengubah tanggal dan waktu video (MP4, MOV) — Windows, macOS, atau Linux, tanpa perlu menginstal perangkat lunak.",
+      "Generator perintah ExifTool untuk mengubah tanggal dan waktu video (MP4, MOV) tanpa prasyarat apa pun dan tanpa perlu menginstal perangkat lunak.",
     toggleTheme: "Ganti tema",
   },
   language: {

@@ -3,7 +3,7 @@ import type { Translation } from "./en";
 const tr: Translation = {
   app: {
     subtitle:
-      "Bir videonun tarih ve saatini (MP4, MOV) değiştirmek için ExifTool komut oluşturucu — Windows, macOS veya Linux, yazılım kurulumu gerekmez.",
+      "Bir videonun tarih ve saatini (MP4, MOV) değiştirmek için ExifTool komut oluşturucu — hiçbir ön koşul veya yazılım kurulumu gerektirmez.",
     toggleTheme: "Temayı değiştir",
   },
   language: {

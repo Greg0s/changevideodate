@@ -3,7 +3,7 @@ import type { Translation } from "./en";
 const es: Translation = {
   app: {
     subtitle:
-      "Generador de comandos de ExifTool para cambiar la fecha y hora de un vídeo (MP4, MOV) — Windows, macOS o Linux, sin necesidad de instalar software.",
+      "Generador de comandos de ExifTool para cambiar la fecha y hora de un vídeo (MP4, MOV) sin ningún requisito previo ni software que instalar.",
     toggleTheme: "Cambiar tema",
   },
   language: {

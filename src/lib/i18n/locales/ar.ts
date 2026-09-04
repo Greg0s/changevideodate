@@ -3,7 +3,7 @@ import type { Translation } from "./en";
 const ar: Translation = {
   app: {
     subtitle:
-      "أداة لتوليد أمر ExifTool لتغيير تاريخ ووقت الفيديو (MP4, MOV) — على ويندوز أو ماك أو لينكس، دون الحاجة لتثبيت أي برنامج.",
+      "أداة لتوليد أمر ExifTool لتغيير تاريخ ووقت الفيديو (MP4, MOV) دون أي متطلبات مسبقة ودون الحاجة لتثبيت أي برنامج.",
     toggleTheme: "تبديل المظهر",
   },
   language: {

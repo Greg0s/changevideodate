@@ -3,7 +3,7 @@ import type { Translation } from "./en";
 const ko: Translation = {
   app: {
     subtitle:
-      "비디오(MP4, MOV)의 날짜와 시간을 변경하는 ExifTool 명령어 생성기 — Windows, macOS, Linux 지원, 소프트웨어 설치 불필요.",
+      "비디오(MP4, MOV)의 날짜와 시간을 변경하는 ExifTool 명령어 생성기 — 별도의 준비 사항이나 소프트웨어 설치가 전혀 필요 없습니다.",
     toggleTheme: "테마 전환",
   },
   language: {

@@ -3,7 +3,7 @@ import type { Translation } from "./en";
 const de: Translation = {
   app: {
     subtitle:
-      "ExifTool-Befehlsgenerator zum Ändern von Datum und Uhrzeit eines Videos (MP4, MOV) — Windows, macOS oder Linux, ohne Software zu installieren.",
+      "ExifTool-Befehlsgenerator zum Ändern von Datum und Uhrzeit eines Videos (MP4, MOV) ohne Voraussetzungen und ohne Software zu installieren.",
     toggleTheme: "Design umschalten",
   },
   language: {

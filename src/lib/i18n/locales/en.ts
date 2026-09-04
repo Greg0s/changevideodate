@@ -1,7 +1,7 @@
 const en = {
   app: {
     subtitle:
-      "ExifTool command generator to change a video's date and time (MP4, MOV) — Windows, macOS or Linux, no software to install.",
+      "ExifTool command generator to change a video's date and time (MP4, MOV) with no prerequisites and nothing to install.",
     toggleTheme: "Toggle theme",
   },
   language: {

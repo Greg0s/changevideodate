@@ -3,7 +3,7 @@ import type { Translation } from "./en";
 const vi: Translation = {
   app: {
     subtitle:
-      "Trình tạo lệnh ExifTool để thay đổi ngày giờ của video (MP4, MOV) — Windows, macOS hoặc Linux, không cần cài đặt phần mềm.",
+      "Trình tạo lệnh ExifTool để thay đổi ngày giờ của video (MP4, MOV) không cần điều kiện tiên quyết nào và không cần cài đặt phần mềm.",
     toggleTheme: "Chuyển giao diện",
   },
   language: {
