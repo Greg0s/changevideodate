@@ -84,14 +84,14 @@ export default function App() {
               <h1 className="text-xl sm:text-2xl font-semibold tracking-tight">changevideodate</h1>
             </div>
             <p style={{ color: theme.textMuted, fontFamily: SANS_FONT }} className="text-sm max-w-md leading-relaxed">
-              Générateur de commande ExifTool pour changer la date et l'heure d'une vidéo
-              (MP4, MOV) — Windows, macOS ou Linux, sans installer de logiciel.
+              ExifTool command generator to change a video's date and time (MP4, MOV) —
+              Windows, macOS or Linux, no software to install.
             </p>
           </div>
           <button
             type="button"
             onClick={() => setIsDark((v) => !v)}
-            aria-label="Changer de thème"
+            aria-label="Toggle theme"
             style={{ borderColor: theme.border, color: theme.textMuted }}
             className="shrink-0 p-2 rounded-md border hover:opacity-80 transition-opacity cursor-pointer"
           >
@@ -119,7 +119,7 @@ export default function App() {
           </div>
           <div className="sm:col-span-2">
             <label style={{ color: theme.textMuted }} className="text-xs block mb-1.5">
-              Heure
+              Time
             </label>
             <input
               type="time"
@@ -150,7 +150,7 @@ export default function App() {
 
         <div style={{ borderColor: theme.border, color: theme.textMuted, fontFamily: SANS_FONT }} className="flex items-center gap-2 text-xs border-t pt-5">
           <Sparkles size={13} style={{ color: theme.accent }} />
-          Une application de bureau avec interface graphique arrive bientôt.
+          A desktop app with a graphical interface is coming soon.
         </div>
       </div>
     </div>

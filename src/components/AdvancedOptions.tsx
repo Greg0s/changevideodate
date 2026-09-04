@@ -48,7 +48,7 @@ export function AdvancedOptions({
         className="w-full flex items-center justify-between px-4 py-3 text-xs sm:text-sm cursor-pointer"
         style={{ color: theme.text }}
       >
-        Options avancées
+        Advanced options
         <ChevronDown
           size={14}
           style={{
@@ -62,7 +62,7 @@ export function AdvancedOptions({
         <div style={{ borderColor: theme.border }} className="border-t px-4 py-4 space-y-4">
           <div>
             <p style={{ color: theme.textMuted }} className="text-xs mb-2">
-              Tags de date à modifier
+              Date tags to modify
             </p>
             <div className="space-y-2">
               {TAG_KEYS.map((key) => (
@@ -86,10 +86,10 @@ export function AdvancedOptions({
               onChange={(e) => onUtcChange(e.target.checked)}
               style={{ accentColor: theme.accent }}
             />
-            Forcer l'heure UTC (-api QuickTimeUTC)
+            Force UTC time (-api QuickTimeUTC)
           </label>
           <p style={{ color: theme.textMuted }} className="text-xs -mt-2 pl-6">
-            Recommandé pour les vidéos MP4/MOV : préserve l'horodatage réel attendu par
+            Recommended for MP4/MOV videos: preserves the real timestamp expected by
             QuickTime.
           </p>
 
@@ -100,7 +100,7 @@ export function AdvancedOptions({
               onChange={(e) => onOverwriteChange(e.target.checked)}
               style={{ accentColor: theme.accent }}
             />
-            Écraser le fichier original (sans copie _original)
+            Overwrite the original file (no _original copy)
           </label>
 
           <div style={{ borderColor: theme.border }} className="border-t pt-4">
@@ -112,7 +112,7 @@ export function AdvancedOptions({
                 style={{ accentColor: theme.accent }}
               />
               <MapPin size={13} style={{ color: theme.textMuted }} />
-              Modifier la localisation
+              Edit location
             </label>
             {locationEnabled && (
               <div className="grid grid-cols-2 gap-3">

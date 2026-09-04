@@ -47,7 +47,7 @@ export function CommandCard({ segments, shellName, theme }: CommandCardProps) {
           className="flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium transition-colors cursor-pointer"
         >
           {copied ? <Check size={13} /> : <Copy size={13} />}
-          {copied ? "Copié !" : "Copier"}
+          {copied ? "Copied!" : "Copy"}
         </button>
       </div>
       <div className="px-4 py-5 sm:px-5 sm:py-6 overflow-x-auto">

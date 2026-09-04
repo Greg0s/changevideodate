@@ -18,7 +18,7 @@ export function FilePathField({ os, value, onChange, theme }: FilePathFieldProps
   return (
     <div className="sm:col-span-3 relative">
       <label style={{ color: theme.textMuted, fontFamily: SANS_FONT }} className="text-xs flex items-center gap-1.5 mb-1.5">
-        Chemin du fichier
+        File path
         <span
           onMouseEnter={() => setTooltipOpen(true)}
           onMouseLeave={() => setTooltipOpen(false)}
@@ -34,7 +34,7 @@ export function FilePathField({ os, value, onChange, theme }: FilePathFieldProps
               className="absolute left-0 top-5 z-10 w-64 rounded-lg border p-3 text-xs shadow-lg"
             >
               <p style={{ color: theme.textMuted }} className="mb-2">
-                Récupérer le chemin :
+                Get the path:
               </p>
               <ol className="list-decimal list-inside space-y-1 mb-3">
                 {tip.steps.map((s, idx) => (

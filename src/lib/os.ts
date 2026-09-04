@@ -37,21 +37,21 @@ export function defaultPath(os: OsId): string {
 export function pathTooltip(os: OsId): PathTooltipContent {
   if (os === "windows") {
     return {
-      steps: ["Maj + clic droit sur le fichier", "Copier en tant que chemin d'accès"],
-      menu: ["Ouvrir avec", "Copier", "Copier en tant que chemin d'accès"],
+      steps: ["Shift + right-click the file", "Copy as path"],
+      menu: ["Open with", "Copy", "Copy as path"],
       highlight: 2,
     };
   }
   if (os === "macos") {
     return {
-      steps: ["⌥ (Option) + clic droit sur le fichier", "Copier « clip.mp4 » comme chemin d'accès"],
-      menu: ["Ouvrir avec", "Dupliquer", "Copier « clip.mp4 » comme chemin d'accès"],
+      steps: ["⌥ (Option) + right-click the file", 'Copy "clip.mp4" as Pathname'],
+      menu: ["Open With", "Duplicate", 'Copy "clip.mp4" as Pathname'],
       highlight: 2,
     };
   }
   return {
-    steps: ["Clic droit sur le fichier (Nautilus, Dolphin…)", "Copier l'emplacement"],
-    menu: ["Ouvrir avec", "Couper", "Copier l'emplacement"],
+    steps: ["Right-click the file (Nautilus, Dolphin…)", "Copy location"],
+    menu: ["Open with", "Cut", "Copy location"],
     highlight: 2,
   };
 }
