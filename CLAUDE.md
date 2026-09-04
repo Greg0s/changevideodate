@@ -59,5 +59,4 @@ passed down to `CommandCard` for display. Adding a new ExifTool flag/option mean
 state is needed, add the corresponding UI in `AdvancedOptions.tsx` (or elsewhere), and emit the new
 segment(s) in `command.ts`.
 
-The UI text (labels, tooltips, helper text) is currently in French, but new user-facing strings should be
-written in English.
+The UI text (labels, tooltips, helper text) is in English.

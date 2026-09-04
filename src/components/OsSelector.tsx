@@ -11,7 +11,7 @@ export function OsSelector({ os, onChange, theme }: OsSelectorProps) {
   return (
     <div
       role="tablist"
-      aria-label="Système d'exploitation"
+      aria-label="Operating system"
       style={{ borderColor: theme.border, background: theme.panelHead }}
       className="inline-flex p-1 rounded-lg border mb-4 gap-1"
     >
