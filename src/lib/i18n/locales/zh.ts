@@ -42,6 +42,12 @@ const zh: Translation = {
     editLocation: "编辑位置",
     latitude: "纬度",
     longitude: "经度",
+    tagMeanings: {
+      createDate: "创建日期",
+      mediaCreateDate: "媒体创建日期",
+      trackCreateDate: "轨道创建日期",
+      modifyDate: "修改日期",
+    },
   },
   command: {
     copy: "复制",

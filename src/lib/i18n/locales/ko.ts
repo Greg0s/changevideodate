@@ -43,6 +43,12 @@ const ko: Translation = {
     editLocation: "위치 편집",
     latitude: "위도",
     longitude: "경도",
+    tagMeanings: {
+      createDate: "생성일",
+      mediaCreateDate: "미디어 생성일",
+      trackCreateDate: "트랙 생성일",
+      modifyDate: "수정일",
+    },
   },
   command: {
     copy: "복사",

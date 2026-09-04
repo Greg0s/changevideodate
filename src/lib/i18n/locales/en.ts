@@ -41,6 +41,12 @@ const en = {
     editLocation: "Edit location",
     latitude: "Latitude",
     longitude: "Longitude",
+    tagMeanings: {
+      createDate: "Creation date",
+      mediaCreateDate: "Media creation date",
+      trackCreateDate: "Track creation date",
+      modifyDate: "Modification date",
+    },
   },
   command: {
     copy: "Copy",

@@ -77,6 +77,9 @@ export function AdvancedOptions({
                     style={{ accentColor: theme.accent }}
                   />
                   {TAG_LABELS[key]}
+                  <span style={{ color: theme.textMuted, opacity: 0.7 }} className="text-[11px]">
+                    {t.advanced.tagMeanings[key]}
+                  </span>
                 </label>
               ))}
             </div>
