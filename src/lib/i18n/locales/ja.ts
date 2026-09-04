@@ -3,7 +3,7 @@ import type { Translation } from "./en";
 const ja: Translation = {
   app: {
     subtitle:
-      "動画の日時（MP4、MOV）を変更するための ExifTool コマンドジェネレーター — Windows、macOS、Linux に対応、ソフトウェアのインストール不要。",
+      "動画の日時（MP4、MOV）を変更するための ExifTool コマンドジェネレーター。前提条件なし、ソフトウェアのインストール不要。",
     toggleTheme: "テーマを切り替え",
   },
   language: {

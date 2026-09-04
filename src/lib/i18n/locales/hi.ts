@@ -3,7 +3,7 @@ import type { Translation } from "./en";
 const hi: Translation = {
   app: {
     subtitle:
-      "वीडियो (MP4, MOV) की तारीख़ और समय बदलने के लिए ExifTool कमांड जनरेटर — Windows, macOS या Linux, कोई सॉफ़्टवेयर इंस्टॉल करने की ज़रूरत नहीं।",
+      "वीडियो (MP4, MOV) की तारीख़ और समय बदलने के लिए ExifTool कमांड जनरेटर — बिना किसी पूर्व-आवश्यकता के और बिना कोई सॉफ़्टवेयर इंस्टॉल किए।",
     toggleTheme: "थीम बदलें",
   },
   language: {

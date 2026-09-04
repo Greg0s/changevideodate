@@ -2,7 +2,7 @@ import type { Translation } from "./en";
 
 const zh: Translation = {
   app: {
-    subtitle: "ExifTool 命令生成器，用于更改视频的日期和时间（MP4、MOV）——支持 Windows、macOS 或 Linux，无需安装软件。",
+    subtitle: "ExifTool 命令生成器，用于更改视频的日期和时间（MP4、MOV），无需任何前提条件，也无需安装任何软件。",
     toggleTheme: "切换主题",
   },
   language: {

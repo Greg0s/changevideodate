@@ -3,7 +3,7 @@ import type { Translation } from "./en";
 const ru: Translation = {
   app: {
     subtitle:
-      "Генератор команд ExifTool для изменения даты и времени видео (MP4, MOV) — Windows, macOS или Linux, без установки программ.",
+      "Генератор команд ExifTool для изменения даты и времени видео (MP4, MOV) без каких-либо предварительных требований и установки программ.",
     toggleTheme: "Переключить тему",
   },
   language: {
