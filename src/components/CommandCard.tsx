@@ -1,15 +1,17 @@
 import { Check, Copy } from "lucide-react";
 import { useState } from "react";
 import { SANS_FONT } from "../lib/theme";
+import type { Translation } from "../lib/i18n/translations";
 import type { CommandSegment, Theme } from "../lib/types";
 
 interface CommandCardProps {
   segments: CommandSegment[];
   shellName: string;
   theme: Theme;
+  t: Translation;
 }
 
-export function CommandCard({ segments, shellName, theme }: CommandCardProps) {
+export function CommandCard({ segments, shellName, theme, t }: CommandCardProps) {
   const [copied, setCopied] = useState(false);
 
   async function handleCopy() {
@@ -47,7 +49,7 @@ export function CommandCard({ segments, shellName, theme }: CommandCardProps) {
           className="flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium transition-colors cursor-pointer"
         >
           {copied ? <Check size={13} /> : <Copy size={13} />}
-          {copied ? "Copied!" : "Copy"}
+          {copied ? t.command.copied : t.command.copy}
         </button>
       </div>
       <div className="px-4 py-5 sm:px-5 sm:py-6 overflow-x-auto">

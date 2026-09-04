@@ -45,18 +45,42 @@ all state lives in `App.tsx` via `useState`.
 - **`src/lib/theme.ts`** — two hardcoded `Theme` objects (dark/light) consumed as inline styles; no
   Tailwind dark-mode class strategy is used for themed colors (Tailwind utility classes are used only for
   layout/spacing). `getTheme(isDark)` selects one; `prefersDark()` reads `prefers-color-scheme`.
-- **`src/lib/types.ts`** — shared types (`OsId`, `DateTagOptions`, `CommandSegment`/`SegmentKind`, `Theme`,
-  `PathTooltipContent`).
-- **`src/components/`** — presentational components, each receiving `theme` and its slice of state/handlers
-  as props from `App.tsx` (no context, no state management library):
+- **`src/lib/types.ts`** — shared types (`OsId`, `DateTagOptions`, `CommandSegment`/`SegmentKind`, `Theme`).
+- **`src/lib/i18n/`** — translation data and locale helpers, following the same "plain functions/data, state
+  lives in `App.tsx`" pattern as `theme.ts` (no context provider):
+  - `languages.ts` — the `LANGUAGES` list (15 supported locales: code, English name, native name, and an
+    optional `dir: "rtl"` for Arabic) plus the derived `LocaleCode` type and `localeDir()`.
+  - `detect.ts` — `detectLocale()` (matches `navigator.languages` against `LANGUAGES`, falling back to
+    English), `loadStoredLocale()`/`storeLocale()` (persist the user's manual choice in `localStorage` under
+    `changevideodate.locale`), and `initialLocale()` (stored choice, else browser detection).
+  - `locales/<code>.ts` — one file per language, each a `Translation` object with the same shape as the
+    canonical `locales/en.ts` (which defines the `Translation` type via `typeof en`). Includes the
+    OS-specific file-path tooltip copy (steps + mimicked context-menu items) that used to live in `os.ts`.
+  - `translations.ts` — aggregates all locale files into `getTranslation(locale)`.
+  - Adding a language: add an entry to `LANGUAGES`, add `locales/<code>.ts` satisfying `Translation`, and
+    register it in `translations.ts`. Adding a UI string: add the key to `locales/en.ts` first (source of
+    truth for the `Translation` type), then fill in every other locale file — TypeScript will error on any
+    file missing a key.
+- **`src/components/`** — presentational components, each receiving `theme` and `t` (the current
+  `Translation`) plus its slice of state/handlers as props from `App.tsx` (no context, no state management
+  library):
   - `OsSelector` — OS tab switcher.
   - `CommandCard` — renders the generated command with per-segment coloring and a copy-to-clipboard button.
-  - `FilePathField` — file path input plus an OS-specific tooltip on how to obtain the path.
+  - `FilePathField` — file path input plus an OS-specific tooltip (from `t.pathTooltip[os]`) on how to
+    obtain the path.
   - `AdvancedOptions` — collapsible panel for tag toggles, UTC/overwrite checkboxes, and GPS lat/lon.
+  - `LanguageSelector` — icon button (next to the theme toggle) opening a searchable dropdown of the 15
+    languages in `LANGUAGES`; selecting one calls back up to `App.tsx`.
 
 Data flow is one-directional and synchronous: form state in `App.tsx` → `buildCommandSegments` → segments
 passed down to `CommandCard` for display. Adding a new ExifTool flag/option means: extend `types.ts` if new
 state is needed, add the corresponding UI in `AdvancedOptions.tsx` (or elsewhere), and emit the new
 segment(s) in `command.ts`.
 
-The UI text (labels, tooltips, helper text) is in English.
+## Internationalization
+
+The UI is multilingual. `App.tsx` holds `locale` state (initialized from `initialLocale()`), derives
+`t = getTranslation(locale)`, and passes `t` down to every component instead of hardcoding strings. On
+locale change it also sets `document.documentElement.lang`/`dir` (Arabic renders right-to-left) and persists
+the choice via `storeLocale()`. ExifTool tag names (`CreateDate`, etc.), shell names, and the app name
+itself are not translated — they're technical identifiers, not prose.

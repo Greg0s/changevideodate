@@ -1,17 +1,19 @@
 import { OS_OPTIONS } from "../lib/os";
+import type { Translation } from "../lib/i18n/translations";
 import type { OsId, Theme } from "../lib/types";
 
 interface OsSelectorProps {
   os: OsId;
   onChange: (os: OsId) => void;
   theme: Theme;
+  t: Translation;
 }
 
-export function OsSelector({ os, onChange, theme }: OsSelectorProps) {
+export function OsSelector({ os, onChange, theme, t }: OsSelectorProps) {
   return (
     <div
       role="tablist"
-      aria-label="Operating system"
+      aria-label={t.os.ariaLabel}
       style={{ borderColor: theme.border, background: theme.panelHead }}
       className="inline-flex p-1 rounded-lg border mb-4 gap-1"
     >

@@ -2,10 +2,12 @@ import { ChevronDown, MapPin } from "lucide-react";
 import { useState } from "react";
 import { TAG_LABELS } from "../lib/command";
 import { SANS_FONT } from "../lib/theme";
+import type { Translation } from "../lib/i18n/translations";
 import type { DateTagOptions, Theme } from "../lib/types";
 
 interface AdvancedOptionsProps {
   theme: Theme;
+  t: Translation;
   tags: DateTagOptions;
   onTagsChange: (tags: DateTagOptions) => void;
   overwrite: boolean;
@@ -24,6 +26,7 @@ const TAG_KEYS = Object.keys(TAG_LABELS) as (keyof DateTagOptions)[];
 
 export function AdvancedOptions({
   theme,
+  t,
   tags,
   onTagsChange,
   overwrite,
@@ -48,7 +51,7 @@ export function AdvancedOptions({
         className="w-full flex items-center justify-between px-4 py-3 text-xs sm:text-sm cursor-pointer"
         style={{ color: theme.text }}
       >
-        Advanced options
+        {t.advanced.title}
         <ChevronDown
           size={14}
           style={{
@@ -62,7 +65,7 @@ export function AdvancedOptions({
         <div style={{ borderColor: theme.border }} className="border-t px-4 py-4 space-y-4">
           <div>
             <p style={{ color: theme.textMuted }} className="text-xs mb-2">
-              Date tags to modify
+              {t.advanced.dateTagsToModify}
             </p>
             <div className="space-y-2">
               {TAG_KEYS.map((key) => (
@@ -86,11 +89,10 @@ export function AdvancedOptions({
               onChange={(e) => onUtcChange(e.target.checked)}
               style={{ accentColor: theme.accent }}
             />
-            Force UTC time (-api QuickTimeUTC)
+            {t.advanced.forceUtc}
           </label>
           <p style={{ color: theme.textMuted }} className="text-xs -mt-2 pl-6">
-            Recommended for MP4/MOV videos: preserves the real timestamp expected by
-            QuickTime.
+            {t.advanced.forceUtcHelp}
           </p>
 
           <label className="flex items-center gap-2 text-xs sm:text-sm cursor-pointer" style={{ color: theme.text }}>
@@ -100,7 +102,7 @@ export function AdvancedOptions({
               onChange={(e) => onOverwriteChange(e.target.checked)}
               style={{ accentColor: theme.accent }}
             />
-            Overwrite the original file (no _original copy)
+            {t.advanced.overwrite}
           </label>
 
           <div style={{ borderColor: theme.border }} className="border-t pt-4">
@@ -112,13 +114,13 @@ export function AdvancedOptions({
                 style={{ accentColor: theme.accent }}
               />
               <MapPin size={13} style={{ color: theme.textMuted }} />
-              Edit location
+              {t.advanced.editLocation}
             </label>
             {locationEnabled && (
               <div className="grid grid-cols-2 gap-3">
                 <div>
                   <label style={{ color: theme.textMuted }} className="text-xs block mb-1">
-                    Latitude
+                    {t.advanced.latitude}
                   </label>
                   <input
                     value={lat}
@@ -130,7 +132,7 @@ export function AdvancedOptions({
                 </div>
                 <div>
                   <label style={{ color: theme.textMuted }} className="text-xs block mb-1">
-                    Longitude
+                    {t.advanced.longitude}
                   </label>
                   <input
                     value={lon}

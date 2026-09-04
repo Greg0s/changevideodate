@@ -7,12 +7,6 @@ export interface DateTagOptions {
   modifyDate: boolean;
 }
 
-export interface PathTooltipContent {
-  steps: string[];
-  menu: string[];
-  highlight: number;
-}
-
 export type SegmentKind =
   | "preamble"
   | "cmd"
