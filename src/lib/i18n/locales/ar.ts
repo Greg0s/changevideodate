@@ -43,6 +43,12 @@ const ar: Translation = {
     editLocation: "تعديل الموقع الجغرافي",
     latitude: "خط العرض",
     longitude: "خط الطول",
+    tagMeanings: {
+      createDate: "تاريخ الإنشاء",
+      mediaCreateDate: "تاريخ إنشاء الوسائط",
+      trackCreateDate: "تاريخ إنشاء المسار",
+      modifyDate: "تاريخ التعديل",
+    },
   },
   command: {
     copy: "نسخ",

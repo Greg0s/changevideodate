@@ -43,6 +43,12 @@ const ja: Translation = {
     editLocation: "位置情報を編集",
     latitude: "緯度",
     longitude: "経度",
+    tagMeanings: {
+      createDate: "作成日",
+      mediaCreateDate: "メディア作成日",
+      trackCreateDate: "トラック作成日",
+      modifyDate: "変更日",
+    },
   },
   command: {
     copy: "コピー",

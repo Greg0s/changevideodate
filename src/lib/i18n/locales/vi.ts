@@ -43,6 +43,12 @@ const vi: Translation = {
     editLocation: "Chỉnh sửa vị trí",
     latitude: "Vĩ độ",
     longitude: "Kinh độ",
+    tagMeanings: {
+      createDate: "Ngày tạo",
+      mediaCreateDate: "Ngày tạo media",
+      trackCreateDate: "Ngày tạo track",
+      modifyDate: "Ngày sửa đổi",
+    },
   },
   command: {
     copy: "Sao chép",

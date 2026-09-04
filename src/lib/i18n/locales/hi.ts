@@ -43,6 +43,12 @@ const hi: Translation = {
     editLocation: "स्थान संपादित करें",
     latitude: "अक्षांश",
     longitude: "देशांतर",
+    tagMeanings: {
+      createDate: "निर्माण तिथि",
+      mediaCreateDate: "मीडिया निर्माण तिथि",
+      trackCreateDate: "ट्रैक निर्माण तिथि",
+      modifyDate: "संशोधन तिथि",
+    },
   },
   command: {
     copy: "कॉपी करें",
