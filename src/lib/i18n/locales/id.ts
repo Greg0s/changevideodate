@@ -43,6 +43,12 @@ const id: Translation = {
     editLocation: "Edit lokasi",
     latitude: "Lintang",
     longitude: "Bujur",
+    tagMeanings: {
+      createDate: "Tanggal pembuatan",
+      mediaCreateDate: "Tanggal pembuatan media",
+      trackCreateDate: "Tanggal pembuatan track",
+      modifyDate: "Tanggal modifikasi",
+    },
   },
   command: {
     copy: "Salin",

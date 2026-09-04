@@ -43,6 +43,12 @@ const ru: Translation = {
     editLocation: "Изменить местоположение",
     latitude: "Широта",
     longitude: "Долгота",
+    tagMeanings: {
+      createDate: "Дата создания",
+      mediaCreateDate: "Дата создания медиа",
+      trackCreateDate: "Дата создания дорожки",
+      modifyDate: "Дата изменения",
+    },
   },
   command: {
     copy: "Копировать",

@@ -43,6 +43,12 @@ const tr: Translation = {
     editLocation: "Konumu düzenle",
     latitude: "Enlem",
     longitude: "Boylam",
+    tagMeanings: {
+      createDate: "Oluşturulma tarihi",
+      mediaCreateDate: "Medya oluşturulma tarihi",
+      trackCreateDate: "Parça oluşturulma tarihi",
+      modifyDate: "Değiştirilme tarihi",
+    },
   },
   command: {
     copy: "Kopyala",

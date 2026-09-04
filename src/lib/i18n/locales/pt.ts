@@ -43,6 +43,12 @@ const pt: Translation = {
     editLocation: "Editar localização",
     latitude: "Latitude",
     longitude: "Longitude",
+    tagMeanings: {
+      createDate: "Data de criação",
+      mediaCreateDate: "Data de criação da mídia",
+      trackCreateDate: "Data de criação da faixa",
+      modifyDate: "Data de modificação",
+    },
   },
   command: {
     copy: "Copiar",
