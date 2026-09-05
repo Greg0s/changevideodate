@@ -28,6 +28,18 @@ export const TAG_LABELS: Record<keyof DateTagOptions, string> = {
   modifyDate: "ModifyDate",
 };
 
+/** Strips a single layer of matching quotes (e.g. from a copied "path") so it isn't quoted twice. */
+function stripSurroundingQuotes(path: string): string {
+  if (path.length >= 2) {
+    const first = path[0];
+    const last = path[path.length - 1];
+    if ((first === '"' || first === "'") && first === last) {
+      return path.slice(1, -1);
+    }
+  }
+  return path;
+}
+
 /** Converts native date/time input values into ExifTool's "YYYY:MM:DD HH:MM:SS" format. */
 export function formatExifDateTime(date: string, time: string): string {
   const datePart = date.split("-").join(":");
@@ -71,7 +83,7 @@ export function buildCommandSegments(input: CommandInput): CommandSegment[] {
     segments.push({ text: "-overwrite_original", kind: "flag" });
   }
 
-  segments.push({ text: quoteForOs(os, filePath || "video.mp4"), kind: "path" });
+  segments.push({ text: quoteForOs(os, stripSurroundingQuotes(filePath) || "video.mp4"), kind: "path" });
 
   return segments;
 }
