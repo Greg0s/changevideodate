@@ -18,16 +18,13 @@ const en = {
   },
   pathTooltip: {
     windows: {
-      steps: ["Shift + right-click the file", "Copy as path"],
-      menu: ["Open with", "Copy", "Copy as path"],
+      steps: ["Right-click the file", "Copy as path"],
     },
     macos: {
       steps: ["⌥ (Option) + right-click the file", 'Copy "clip.mp4" as Pathname'],
-      menu: ["Open With", "Duplicate", 'Copy "clip.mp4" as Pathname'],
     },
     linux: {
       steps: ["Right-click the file (Nautilus, Dolphin…)", "Copy location"],
-      menu: ["Open with", "Cut", "Copy location"],
     },
   },
   date: { label: "Date" },

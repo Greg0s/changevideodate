@@ -20,16 +20,13 @@ const it: Translation = {
   },
   pathTooltip: {
     windows: {
-      steps: ["Maiusc + clic destro sul file", "Copia come percorso"],
-      menu: ["Apri con", "Copia", "Copia come percorso"],
+      steps: ["Clic destro sul file", "Copia come percorso"],
     },
     macos: {
       steps: ["⌥ (Opzione) + clic destro sul file", 'Copia "clip.mp4" come nome percorso'],
-      menu: ["Apri con", "Duplica", 'Copia "clip.mp4" come nome percorso'],
     },
     linux: {
       steps: ["Clic destro sul file (Nautilus, Dolphin…)", "Copia posizione"],
-      menu: ["Apri con", "Taglia", "Copia posizione"],
     },
   },
   date: { label: "Data" },

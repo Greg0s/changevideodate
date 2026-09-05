@@ -20,16 +20,13 @@ const fr: Translation = {
   },
   pathTooltip: {
     windows: {
-      steps: ["Maj + clic droit sur le fichier", "Copier en tant que chemin d'accès"],
-      menu: ["Ouvrir avec", "Copier", "Copier en tant que chemin d'accès"],
+      steps: ["Clic droit sur le fichier", "Copier en tant que chemin d'accès"],
     },
     macos: {
       steps: ["⌥ (Option) + clic droit sur le fichier", 'Copier « clip.mp4 » en tant que chemin'],
-      menu: ["Ouvrir avec", "Dupliquer", 'Copier « clip.mp4 » en tant que chemin'],
     },
     linux: {
       steps: ["Clic droit sur le fichier (Nautilus, Dolphin…)", "Copier l'emplacement"],
-      menu: ["Ouvrir avec", "Couper", "Copier l'emplacement"],
     },
   },
   date: { label: "Date" },

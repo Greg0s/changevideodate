@@ -20,16 +20,13 @@ const ja: Translation = {
   },
   pathTooltip: {
     windows: {
-      steps: ["Shift + ファイルを右クリック", "パスとしてコピー"],
-      menu: ["プログラムから開く", "コピー", "パスとしてコピー"],
+      steps: ["ファイルを右クリック", "パスとしてコピー"],
     },
     macos: {
       steps: ["⌥（Option）+ ファイルを右クリック", "「clip.mp4」をパス名としてコピー"],
-      menu: ["このアプリケーションで開く", "複製", "「clip.mp4」をパス名としてコピー"],
     },
     linux: {
       steps: ["ファイルを右クリック（Nautilus、Dolphin など）", "場所をコピー"],
-      menu: ["アプリケーションで開く", "切り取り", "場所をコピー"],
     },
   },
   date: { label: "日付" },

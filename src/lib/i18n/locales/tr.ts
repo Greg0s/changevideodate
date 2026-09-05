@@ -20,16 +20,13 @@ const tr: Translation = {
   },
   pathTooltip: {
     windows: {
-      steps: ["Shift + dosyaya sağ tıklayın", "Yol olarak kopyala"],
-      menu: ["Birlikte aç", "Kopyala", "Yol olarak kopyala"],
+      steps: ["Dosyaya sağ tıklayın", "Yol olarak kopyala"],
     },
     macos: {
       steps: ["⌥ (Option) + dosyaya sağ tıklayın", '"clip.mp4" dosyasını Yol Adı olarak kopyala'],
-      menu: ["Birlikte Aç", "Çoğalt", '"clip.mp4" dosyasını Yol Adı olarak kopyala'],
     },
     linux: {
       steps: ["Dosyaya sağ tıklayın (Nautilus, Dolphin…)", "Konumu kopyala"],
-      menu: ["Birlikte aç", "Kes", "Konumu kopyala"],
     },
   },
   date: { label: "Tarih" },

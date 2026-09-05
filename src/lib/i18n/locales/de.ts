@@ -20,16 +20,13 @@ const de: Translation = {
   },
   pathTooltip: {
     windows: {
-      steps: ["Umschalt + Rechtsklick auf die Datei", "Als Pfad kopieren"],
-      menu: ["Öffnen mit", "Kopieren", "Als Pfad kopieren"],
+      steps: ["Rechtsklick auf die Datei", "Als Pfad kopieren"],
     },
     macos: {
       steps: ["⌥ (Option) + Rechtsklick auf die Datei", '„clip.mp4" als Pfadname kopieren'],
-      menu: ["Öffnen mit", "Duplizieren", '„clip.mp4" als Pfadname kopieren'],
     },
     linux: {
       steps: ["Rechtsklick auf die Datei (Nautilus, Dolphin…)", "Ort kopieren"],
-      menu: ["Öffnen mit", "Ausschneiden", "Ort kopieren"],
     },
   },
   date: { label: "Datum" },
