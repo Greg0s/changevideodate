@@ -108,7 +108,7 @@ export default function App() {
               onClick={() => setIsDark((v) => !v)}
               aria-label={t.app.toggleTheme}
               style={{ borderColor: theme.border, color: theme.textMuted }}
-              className="p-2 rounded-md border hover:opacity-80 transition-opacity cursor-pointer overflow-hidden"
+              className="p-2 rounded-md border hover:opacity-80 transition-opacity cursor-pointer overflow-hidden inline-flex items-center justify-center"
             >
               <span
                 key={isDark ? "sun" : "moon"}

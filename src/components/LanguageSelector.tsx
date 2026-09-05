@@ -67,7 +67,7 @@ export function LanguageSelector({ theme, locale, onChange, t }: LanguageSelecto
         aria-haspopup="listbox"
         aria-expanded={open}
         style={{ borderColor: theme.border, color: theme.textMuted }}
-        className="p-2 rounded-md border hover:opacity-80 transition-opacity cursor-pointer"
+        className="p-2 rounded-md border hover:opacity-80 transition-opacity cursor-pointer inline-flex items-center justify-center"
       >
         <Languages size={16} />
       </button>
