@@ -108,9 +108,15 @@ export default function App() {
               onClick={() => setIsDark((v) => !v)}
               aria-label={t.app.toggleTheme}
               style={{ borderColor: theme.border, color: theme.textMuted }}
-              className="p-2 rounded-md border hover:opacity-80 transition-opacity cursor-pointer"
+              className="p-2 rounded-md border hover:opacity-80 transition-opacity cursor-pointer overflow-hidden"
             >
-              {isDark ? <Sun size={16} /> : <Moon size={16} />}
+              <span
+                key={isDark ? "sun" : "moon"}
+                className="inline-flex"
+                style={{ animation: "theme-icon-in 0.35s ease" }}
+              >
+                {isDark ? <Sun size={16} /> : <Moon size={16} />}
+              </span>
             </button>
           </div>
         </header>
