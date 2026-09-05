@@ -41,7 +41,7 @@ export default function App() {
     modifyDate: true,
   });
   const [overwrite, setOverwrite] = useState(true);
-  const [utc, setUtc] = useState(true);
+  const [utc, setUtc] = useState(false);
   const [locationEnabled, setLocationEnabled] = useState(false);
   const [lat, setLat] = useState("48.8566");
   const [lon, setLon] = useState("2.3522");
