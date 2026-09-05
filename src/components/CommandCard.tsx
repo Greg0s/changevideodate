@@ -13,14 +13,12 @@ interface CommandCardProps {
 
 export function CommandCard({ segments, shellName, theme, t }: CommandCardProps) {
   const [copied, setCopied] = useState(false);
-  const [pulseKey, setPulseKey] = useState(0);
 
   async function handleCopy() {
     const command = segments.map((s) => s.text).join(" ");
     try {
       await navigator.clipboard.writeText(command);
       setCopied(true);
-      setPulseKey((k) => k + 1);
       window.setTimeout(() => setCopied(false), 1800);
     } catch {
       // Clipboard API unavailable (insecure context, permissions, etc.).
@@ -43,18 +41,14 @@ export function CommandCard({ segments, shellName, theme, t }: CommandCardProps)
         <button
           type="button"
           onClick={handleCopy}
-          key={pulseKey}
           style={{
             background: copied ? theme.success : theme.accent,
             color: copied ? "#0A0A0C" : theme.accentText,
             fontFamily: SANS_FONT,
-            animation: pulseKey > 0 ? "copy-button-pulse 0.4s ease" : undefined,
           }}
-          className="flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium transition cursor-pointer active:scale-90"
+          className="flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium transition-colors cursor-pointer"
         >
-          <span key={copied ? "check" : "copy"} style={{ animation: "copy-icon-pop 0.35s ease" }} className="flex">
-            {copied ? <Check size={13} /> : <Copy size={13} />}
-          </span>
+          {copied ? <Check size={13} /> : <Copy size={13} />}
           {copied ? t.command.copied : t.command.copy}
         </button>
       </div>
