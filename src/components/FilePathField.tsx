@@ -16,7 +16,6 @@ interface FilePathFieldProps {
 export function FilePathField({ os, value, onChange, theme, t }: FilePathFieldProps) {
   const [tooltipOpen, setTooltipOpen] = useState(false);
   const tip = t.pathTooltip[os];
-  const highlight = tip.menu.length - 1;
 
   return (
     <div className="sm:col-span-3 relative">
@@ -39,21 +38,11 @@ export function FilePathField({ os, value, onChange, theme, t }: FilePathFieldPr
               <p style={{ color: theme.textMuted }} className="mb-2">
                 {t.filePath.getPath}
               </p>
-              <ol className="list-decimal list-inside space-y-1 mb-3">
+              <ol className="list-decimal list-inside space-y-1">
                 {tip.steps.map((s, idx) => (
                   <li key={idx}>{s}</li>
                 ))}
               </ol>
-              <div
-                style={{ background: theme.inputBg, borderColor: theme.border, color: theme.textMuted }}
-                className="border rounded px-2.5 py-2 text-xs space-y-1"
-              >
-                {tip.menu.map((m, idx) => (
-                  <div key={idx} style={idx === highlight ? { color: theme.accent } : {}}>
-                    {m}
-                  </div>
-                ))}
-              </div>
             </div>
           )}
         </span>

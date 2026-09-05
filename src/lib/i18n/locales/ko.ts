@@ -20,16 +20,13 @@ const ko: Translation = {
   },
   pathTooltip: {
     windows: {
-      steps: ["Shift + 파일 우클릭", "경로로 복사"],
-      menu: ["연결 프로그램", "복사", "경로로 복사"],
+      steps: ["파일 우클릭", "경로로 복사"],
     },
     macos: {
       steps: ["⌥ (Option) + 파일 우클릭", '"clip.mp4"를 경로 이름으로 복사'],
-      menu: ["다음으로 열기", "복제", '"clip.mp4"를 경로 이름으로 복사'],
     },
     linux: {
       steps: ["파일 우클릭 (Nautilus, Dolphin 등)", "위치 복사"],
-      menu: ["다음으로 열기", "잘라내기", "위치 복사"],
     },
   },
   date: { label: "날짜" },

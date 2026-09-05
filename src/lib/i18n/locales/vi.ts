@@ -20,16 +20,13 @@ const vi: Translation = {
   },
   pathTooltip: {
     windows: {
-      steps: ["Shift + nhấp chuột phải vào tệp", "Sao chép dưới dạng đường dẫn"],
-      menu: ["Mở bằng", "Sao chép", "Sao chép dưới dạng đường dẫn"],
+      steps: ["Nhấp chuột phải vào tệp", "Sao chép dưới dạng đường dẫn"],
     },
     macos: {
       steps: ["⌥ (Option) + nhấp chuột phải vào tệp", 'Sao chép "clip.mp4" dưới dạng đường dẫn'],
-      menu: ["Mở bằng", "Nhân bản", 'Sao chép "clip.mp4" dưới dạng đường dẫn'],
     },
     linux: {
       steps: ["Nhấp chuột phải vào tệp (Nautilus, Dolphin…)", "Sao chép vị trí"],
-      menu: ["Mở bằng", "Cắt", "Sao chép vị trí"],
     },
   },
   date: { label: "Ngày" },

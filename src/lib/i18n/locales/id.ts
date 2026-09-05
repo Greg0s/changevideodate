@@ -20,16 +20,13 @@ const id: Translation = {
   },
   pathTooltip: {
     windows: {
-      steps: ["Shift + klik kanan pada berkas", "Salin sebagai jalur"],
-      menu: ["Buka dengan", "Salin", "Salin sebagai jalur"],
+      steps: ["Klik kanan pada berkas", "Salin sebagai jalur"],
     },
     macos: {
       steps: ["⌥ (Option) + klik kanan pada berkas", 'Salin "clip.mp4" sebagai Nama Jalur'],
-      menu: ["Buka Dengan", "Duplikat", 'Salin "clip.mp4" sebagai Nama Jalur'],
     },
     linux: {
       steps: ["Klik kanan pada berkas (Nautilus, Dolphin…)", "Salin lokasi"],
-      menu: ["Buka dengan", "Potong", "Salin lokasi"],
     },
   },
   date: { label: "Tanggal" },

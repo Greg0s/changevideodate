@@ -19,16 +19,13 @@ const zh: Translation = {
   },
   pathTooltip: {
     windows: {
-      steps: ["Shift + 右键点击文件", "复制为路径"],
-      menu: ["打开方式", "复制", "复制为路径"],
+      steps: ["右键点击文件", "复制为路径"],
     },
     macos: {
       steps: ["⌥（Option）+ 右键点击文件", '将 "clip.mp4" 拷贝为路径名称'],
-      menu: ["打开方式", "复制", '将 "clip.mp4" 拷贝为路径名称'],
     },
     linux: {
       steps: ["右键点击文件（Nautilus、Dolphin 等）", "复制位置"],
-      menu: ["打开方式", "剪切", "复制位置"],
     },
   },
   date: { label: "日期" },
