@@ -94,9 +94,7 @@ export default function App() {
         <header className="flex items-start justify-between gap-4 mb-10">
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <span style={{ color: theme.accent }} className="text-sm">
-                $
-              </span>
+              <img src="/favicon-32x32.png" alt="" width={20} height={20} className="rounded-sm" />
               <h1 className="text-xl sm:text-2xl font-semibold tracking-tight">changevideodate</h1>
             </div>
             <p style={{ color: theme.textMuted, fontFamily: SANS_FONT }} className="text-sm max-w-md leading-relaxed">
