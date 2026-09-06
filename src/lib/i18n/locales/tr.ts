@@ -1,6 +1,11 @@
 import type { Translation } from "./en";
 
 const tr: Translation = {
+  seo: {
+    title: "changevideodate — Video tarihini değiştirmek için ExifTool komut oluşturucu",
+    description:
+      "MP4/MOV videolarınızın tarih ve saatini değiştirmek için tam ExifTool komutunu tek tıkla oluşturun; Windows (PowerShell), macOS (zsh) veya Linux (bash) üzerinde. Ücretsiz, kurulum gerektirmez, tamamen tarayıcınızda çalışır.",
+  },
   app: {
     subtitle:
       "Bir videonun tarih ve saatini (MP4, MOV) değiştirmek için ExifTool komut oluşturucu — hiçbir ön koşul veya yazılım kurulumu gerektirmez.",

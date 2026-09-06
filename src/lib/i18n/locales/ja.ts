@@ -1,6 +1,11 @@
 import type { Translation } from "./en";
 
 const ja: Translation = {
+  seo: {
+    title: "changevideodate — 動画の日付を変更する ExifTool コマンドジェネレーター",
+    description:
+      "MP4/MOV動画の日付と時刻を変更する正確なExifToolコマンドをワンクリックで生成。Windows（PowerShell）、macOS（zsh）、Linux（bash）に対応。無料、インストール不要、100%ブラウザ内で完結。",
+  },
   app: {
     subtitle:
       "動画の日時（MP4、MOV）を変更するための ExifTool コマンドジェネレーター。前提条件なし、ソフトウェアのインストール不要。",

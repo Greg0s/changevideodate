@@ -1,6 +1,11 @@
 import type { Translation } from "./en";
 
 const ko: Translation = {
+  seo: {
+    title: "changevideodate — 동영상 날짜를 변경하는 ExifTool 명령어 생성기",
+    description:
+      "MP4/MOV 동영상의 날짜와 시간을 변경하는 정확한 ExifTool 명령어를 클릭 한 번으로 생성하세요. Windows(PowerShell), macOS(zsh), Linux(bash)를 지원합니다. 무료, 설치 불필요, 100% 브라우저에서 실행됩니다.",
+  },
   app: {
     subtitle:
       "비디오(MP4, MOV)의 날짜와 시간을 변경하는 ExifTool 명령어 생성기 — 별도의 준비 사항이나 소프트웨어 설치가 전혀 필요 없습니다.",
