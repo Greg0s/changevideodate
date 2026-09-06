@@ -1,6 +1,11 @@
 import type { Translation } from "./en";
 
 const zh: Translation = {
+  seo: {
+    title: "changevideodate — 一键生成用于更改视频日期的 ExifTool 命令",
+    description:
+      "一键生成精确的 ExifTool 命令，用于更改 MP4/MOV 视频的日期和时间，支持 Windows（PowerShell）、macOS（zsh）或 Linux（bash）。免费，无需安装，100% 在浏览器中运行。",
+  },
   app: {
     subtitle: "ExifTool 命令生成器，用于更改视频的日期和时间（MP4、MOV），无需任何前提条件，也无需安装任何软件。",
     toggleTheme: "切换主题",

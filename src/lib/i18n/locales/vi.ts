@@ -1,6 +1,11 @@
 import type { Translation } from "./en";
 
 const vi: Translation = {
+  seo: {
+    title: "changevideodate — Trình tạo lệnh ExifTool để đổi ngày video",
+    description:
+      "Tạo ngay lệnh ExifTool chính xác chỉ với một cú nhấp để thay đổi ngày giờ của video MP4/MOV, trên Windows (PowerShell), macOS (zsh) hoặc Linux (bash). Miễn phí, không cần cài đặt, 100% trong trình duyệt.",
+  },
   app: {
     subtitle:
       "Trình tạo lệnh ExifTool để thay đổi ngày giờ của video (MP4, MOV) không cần điều kiện tiên quyết nào và không cần cài đặt phần mềm.",

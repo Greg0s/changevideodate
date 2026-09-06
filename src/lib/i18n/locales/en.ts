@@ -1,4 +1,9 @@
 const en = {
+  seo: {
+    title: "changevideodate — ExifTool command generator to change a video's date",
+    description:
+      "Generate the exact ExifTool command in one click to change the date and time of your MP4/MOV videos, on Windows (PowerShell), macOS (zsh) or Linux (bash). Free, no install, 100% in your browser.",
+  },
   app: {
     subtitle:
       "ExifTool command generator to change a video's date and time (MP4, MOV) with no prerequisites and nothing to install.",

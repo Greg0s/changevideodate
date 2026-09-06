@@ -1,6 +1,11 @@
 import type { Translation } from "./en";
 
 const it: Translation = {
+  seo: {
+    title: "changevideodate — Generatore di comandi ExifTool per cambiare la data di un video",
+    description:
+      "Genera con un clic il comando ExifTool esatto per cambiare data e ora dei tuoi video MP4/MOV, su Windows (PowerShell), macOS (zsh) o Linux (bash). Gratuito, senza installazione, 100% nel browser.",
+  },
   app: {
     subtitle:
       "Generatore di comandi ExifTool per cambiare data e ora di un video (MP4, MOV) senza alcun prerequisito né software da installare.",

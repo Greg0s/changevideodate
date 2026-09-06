@@ -52,7 +52,9 @@ export default function App() {
   useEffect(() => {
     document.documentElement.lang = locale;
     document.documentElement.dir = localeDir(locale);
-  }, [locale]);
+    document.title = t.seo.title;
+    document.querySelector('meta[name="description"]')?.setAttribute("content", t.seo.description);
+  }, [locale, t]);
 
   function handleLocaleChange(next: LocaleCode) {
     setLocale(next);
