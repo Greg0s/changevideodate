@@ -19,6 +19,10 @@ const pt: Translation = {
   os: {
     ariaLabel: "Sistema operacional",
   },
+  install: {
+    alreadyInstalled: "Já tenho o ExifTool instalado",
+    tooltip: "Deixe desmarcado se não tiver certeza.",
+  },
   filePath: {
     label: "Caminho do arquivo",
     getPath: "Obter o caminho:",

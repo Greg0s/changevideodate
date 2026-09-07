@@ -19,6 +19,10 @@ const tr: Translation = {
   os: {
     ariaLabel: "İşletim sistemi",
   },
+  install: {
+    alreadyInstalled: "ExifTool zaten kurulu",
+    tooltip: "Emin değilseniz işaretlemeyin.",
+  },
   filePath: {
     label: "Dosya yolu",
     getPath: "Yolu al:",

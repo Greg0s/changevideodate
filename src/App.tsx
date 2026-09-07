@@ -2,6 +2,7 @@ import { Moon, Sparkles, Sun } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { AdvancedOptions } from "./components/AdvancedOptions";
 import { CommandCard } from "./components/CommandCard";
+import { ExiftoolInstalledToggle } from "./components/ExiftoolInstalledToggle";
 import { FilePathField } from "./components/FilePathField";
 import { LanguageSelector } from "./components/LanguageSelector";
 import { OsSelector } from "./components/OsSelector";
@@ -45,6 +46,7 @@ export default function App() {
   const [locationEnabled, setLocationEnabled] = useState(false);
   const [lat, setLat] = useState("48.8566");
   const [lon, setLon] = useState("2.3522");
+  const [exiftoolInstalled, setExiftoolInstalled] = useState(false);
 
   const theme = getTheme(isDark);
   const t = getTranslation(locale);
@@ -84,8 +86,9 @@ export default function App() {
         locationEnabled,
         lat,
         lon,
+        exiftoolInstalled,
       }),
-    [os, filePath, date, time, tags, overwrite, utc, locationEnabled, lat, lon],
+    [os, filePath, date, time, tags, overwrite, utc, locationEnabled, lat, lon, exiftoolInstalled],
   );
 
   return (
@@ -126,6 +129,8 @@ export default function App() {
         <OsSelector os={os} onChange={handleOsChange} theme={theme} t={t} />
 
         <CommandCard segments={segments} shellName={shellName(os)} theme={theme} t={t} />
+
+        <ExiftoolInstalledToggle checked={exiftoolInstalled} onChange={setExiftoolInstalled} theme={theme} t={t} />
 
         <div style={{ borderColor: theme.border, fontFamily: SANS_FONT }} className="border-t pt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
           <FilePathField os={os} value={filePath} onChange={handleFilePathChange} theme={theme} t={t} />

@@ -19,6 +19,10 @@ const id: Translation = {
   os: {
     ariaLabel: "Sistem operasi",
   },
+  install: {
+    alreadyInstalled: "Saya sudah menginstal ExifTool",
+    tooltip: "Biarkan tidak dicentang jika tidak yakin.",
+  },
   filePath: {
     label: "Jalur berkas",
     getPath: "Dapatkan jalurnya:",

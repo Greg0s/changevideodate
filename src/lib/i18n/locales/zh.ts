@@ -18,6 +18,10 @@ const zh: Translation = {
   os: {
     ariaLabel: "操作系统",
   },
+  install: {
+    alreadyInstalled: "我已经安装了 ExifTool",
+    tooltip: "如果不确定，请不要勾选。",
+  },
   filePath: {
     label: "文件路径",
     getPath: "获取路径：",

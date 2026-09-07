@@ -12,6 +12,7 @@ export interface CommandInput {
   locationEnabled: boolean;
   lat: string;
   lon: string;
+  exiftoolInstalled: boolean;
 }
 
 const TAG_FLAGS: Record<keyof DateTagOptions, string> = {
@@ -48,13 +49,15 @@ export function formatExifDateTime(date: string, time: string): string {
 }
 
 export function buildCommandSegments(input: CommandInput): CommandSegment[] {
-  const { os, filePath, date, time, tags, overwriteOriginal, utc, locationEnabled, lat, lon } = input;
+  const { os, filePath, date, time, tags, overwriteOriginal, utc, locationEnabled, lat, lon, exiftoolInstalled } =
+    input;
   const dateTime = formatExifDateTime(date, time);
 
-  const segments: CommandSegment[] = [
-    { text: installPreamble(os), kind: "preamble" },
-    { text: "exiftool", kind: "cmd" },
-  ];
+  const segments: CommandSegment[] = [];
+  if (!exiftoolInstalled) {
+    segments.push({ text: installPreamble(os), kind: "preamble" });
+  }
+  segments.push({ text: "exiftool", kind: "cmd" });
 
   // -api takes two separate CLI words (option name, then value); quoting them
   // together would turn it into a single argument and break ExifTool's parser.

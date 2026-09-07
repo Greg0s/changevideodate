@@ -19,6 +19,10 @@ const ru: Translation = {
   os: {
     ariaLabel: "Операционная система",
   },
+  install: {
+    alreadyInstalled: "У меня уже установлен ExifTool",
+    tooltip: "Оставьте не отмеченным, если не уверены.",
+  },
   filePath: {
     label: "Путь к файлу",
     getPath: "Получить путь:",

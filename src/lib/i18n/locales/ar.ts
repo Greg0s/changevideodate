@@ -19,6 +19,10 @@ const ar: Translation = {
   os: {
     ariaLabel: "نظام التشغيل",
   },
+  install: {
+    alreadyInstalled: "لدي ExifTool مثبت مسبقًا",
+    tooltip: "اتركه غير محدد إذا لم تكن متأكدًا.",
+  },
   filePath: {
     label: "مسار الملف",
     getPath: "الحصول على المسار:",
