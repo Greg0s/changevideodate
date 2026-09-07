@@ -15,7 +15,7 @@ export function ExiftoolInstalledToggle({ checked, onChange, theme, t }: Exiftoo
   const [tooltipOpen, setTooltipOpen] = useState(false);
 
   return (
-    <div style={{ fontFamily: SANS_FONT }} className="flex items-center gap-2 mb-4">
+    <div style={{ fontFamily: SANS_FONT }} className="flex items-center gap-2 shrink-0">
       <label className="flex items-center gap-2 text-xs sm:text-sm cursor-pointer" style={{ color: theme.text }}>
         <input
           type="checkbox"
@@ -37,7 +37,7 @@ export function ExiftoolInstalledToggle({ checked, onChange, theme, t }: Exiftoo
         {tooltipOpen && (
           <div
             style={{ background: theme.panel, borderColor: theme.border, color: theme.text }}
-            className="absolute left-0 top-5 z-10 w-56 rounded-lg border p-3 text-xs shadow-lg"
+            className="absolute right-0 top-5 z-10 w-56 rounded-lg border p-3 text-xs shadow-lg"
           >
             {t.install.tooltip}
           </div>

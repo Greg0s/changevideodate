@@ -126,11 +126,12 @@ export default function App() {
           </div>
         </header>
 
-        <OsSelector os={os} onChange={handleOsChange} theme={theme} t={t} />
+        <div className="flex items-center justify-between gap-4 mb-4">
+          <OsSelector os={os} onChange={handleOsChange} theme={theme} t={t} />
+          <ExiftoolInstalledToggle checked={exiftoolInstalled} onChange={setExiftoolInstalled} theme={theme} t={t} />
+        </div>
 
         <CommandCard segments={segments} shellName={shellName(os)} theme={theme} t={t} />
-
-        <ExiftoolInstalledToggle checked={exiftoolInstalled} onChange={setExiftoolInstalled} theme={theme} t={t} />
 
         <div style={{ borderColor: theme.border, fontFamily: SANS_FONT }} className="border-t pt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
           <FilePathField os={os} value={filePath} onChange={handleFilePathChange} theme={theme} t={t} />
