@@ -2,6 +2,7 @@ import { Moon, Sparkles, Sun } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { AdvancedOptions } from "./components/AdvancedOptions";
 import { CommandCard } from "./components/CommandCard";
+import { ExiftoolInstalledToggle } from "./components/ExiftoolInstalledToggle";
 import { FilePathField } from "./components/FilePathField";
 import { LanguageSelector } from "./components/LanguageSelector";
 import { OsSelector } from "./components/OsSelector";
@@ -45,6 +46,7 @@ export default function App() {
   const [locationEnabled, setLocationEnabled] = useState(false);
   const [lat, setLat] = useState("48.8566");
   const [lon, setLon] = useState("2.3522");
+  const [exiftoolInstalled, setExiftoolInstalled] = useState(false);
 
   const theme = getTheme(isDark);
   const t = getTranslation(locale);
@@ -84,8 +86,9 @@ export default function App() {
         locationEnabled,
         lat,
         lon,
+        exiftoolInstalled,
       }),
-    [os, filePath, date, time, tags, overwrite, utc, locationEnabled, lat, lon],
+    [os, filePath, date, time, tags, overwrite, utc, locationEnabled, lat, lon, exiftoolInstalled],
   );
 
   return (
@@ -123,7 +126,10 @@ export default function App() {
           </div>
         </header>
 
-        <OsSelector os={os} onChange={handleOsChange} theme={theme} t={t} />
+        <div className="flex items-center justify-between gap-4 mb-4">
+          <OsSelector os={os} onChange={handleOsChange} theme={theme} t={t} />
+          <ExiftoolInstalledToggle checked={exiftoolInstalled} onChange={setExiftoolInstalled} theme={theme} t={t} />
+        </div>
 
         <CommandCard segments={segments} shellName={shellName(os)} theme={theme} t={t} />
 

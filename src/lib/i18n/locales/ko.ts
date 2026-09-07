@@ -19,6 +19,10 @@ const ko: Translation = {
   os: {
     ariaLabel: "운영체제",
   },
+  install: {
+    alreadyInstalled: "ExifTool을 이미 설치했습니다",
+    tooltip: "확실하지 않으면 선택하지 마세요.",
+  },
   filePath: {
     label: "파일 경로",
     getPath: "경로 가져오기:",

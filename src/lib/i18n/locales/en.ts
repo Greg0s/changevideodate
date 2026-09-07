@@ -17,6 +17,10 @@ const en = {
   os: {
     ariaLabel: "Operating system",
   },
+  install: {
+    alreadyInstalled: "I already have ExifTool installed",
+    tooltip: "Leave unchecked if you're not sure.",
+  },
   filePath: {
     label: "File path",
     getPath: "Get the path:",

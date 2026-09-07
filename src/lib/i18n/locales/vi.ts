@@ -19,6 +19,10 @@ const vi: Translation = {
   os: {
     ariaLabel: "Hệ điều hành",
   },
+  install: {
+    alreadyInstalled: "Tôi đã cài đặt ExifTool",
+    tooltip: "Bỏ chọn nếu bạn không chắc.",
+  },
   filePath: {
     label: "Đường dẫn tệp",
     getPath: "Lấy đường dẫn:",

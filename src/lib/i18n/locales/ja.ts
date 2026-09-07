@@ -19,6 +19,10 @@ const ja: Translation = {
   os: {
     ariaLabel: "オペレーティングシステム",
   },
+  install: {
+    alreadyInstalled: "ExifTool はすでにインストール済みです",
+    tooltip: "分からない場合はチェックを外したままにしてください。",
+  },
   filePath: {
     label: "ファイルパス",
     getPath: "パスを取得：",

@@ -29,7 +29,7 @@ export function OsSelector({ os, onChange, theme, t }: OsSelectorProps) {
       role="tablist"
       aria-label={t.os.ariaLabel}
       style={{ borderColor: theme.border, background: theme.panelHead }}
-      className="relative inline-flex p-1 rounded-lg border mb-4 gap-1"
+      className="relative inline-flex p-1 rounded-lg border gap-1"
     >
       {indicator && (
         <div
