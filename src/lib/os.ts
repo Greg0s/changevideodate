@@ -40,15 +40,20 @@ export function shellName(os: OsId): string {
   return "zsh";
 }
 
-/** One-liner that installs ExifTool when it isn't already on the PATH. */
+/** Installs ExifTool when missing, then refreshes the shell's PATH/command cache so it's runnable without a new session. */
 export function installPreamble(os: OsId): string {
   if (os === "windows") {
-    return "if (-not (Get-Command exiftool -ErrorAction SilentlyContinue)) { winget install -e --id OliverBetz.ExifTool } ;";
+    return [
+      "if (-not (Get-Command exiftool -ErrorAction SilentlyContinue)) {",
+      "    winget install -e --id OliverBetz.ExifTool --accept-package-agreements --accept-source-agreements --force",
+      '    $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")',
+      "}",
+    ].join("\n");
   }
   if (os === "linux") {
-    return "command -v exiftool >/dev/null 2>&1 || (sudo apt-get update && sudo apt-get install -y libimage-exiftool-perl) &&";
+    return "command -v exiftool >/dev/null 2>&1 || { sudo apt-get update && sudo apt-get install -y libimage-exiftool-perl && hash -r; } &&";
   }
-  return "command -v exiftool >/dev/null 2>&1 || brew install exiftool &&";
+  return "command -v exiftool >/dev/null 2>&1 || { brew install exiftool && hash -r; } &&";
 }
 
 /** Wraps a value the way each shell expects a "flag=value with spaces" token to be quoted. */
