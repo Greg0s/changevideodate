@@ -7,6 +7,7 @@ import { FilePathField } from "./components/FilePathField";
 import { LanguageSelector } from "./components/LanguageSelector";
 import { OsSelector } from "./components/OsSelector";
 import { buildCommandSegments } from "./lib/command";
+import { formatDateForLocale } from "./lib/i18n/dateFormat";
 import { initialLocale, storeLocale } from "./lib/i18n/detect";
 import { localeDir, type LocaleCode } from "./lib/i18n/languages";
 import { getTranslation } from "./lib/i18n/translations";
@@ -141,11 +142,15 @@ export default function App() {
             </label>
             <input
               type="date"
+              lang={locale}
               value={date}
               onChange={(e) => setDate(e.target.value)}
               style={{ background: theme.inputBg, borderColor: theme.border, color: theme.text, colorScheme: isDark ? "dark" : "light" }}
               className="w-full rounded-md border px-3 py-2 text-xs sm:text-sm outline-none"
             />
+            <p style={{ color: theme.textMuted }} className="text-[11px] mt-1">
+              {formatDateForLocale(date, locale)}
+            </p>
           </div>
           <div className="sm:col-span-2">
             <label style={{ color: theme.textMuted }} className="text-xs block mb-1.5">
