@@ -45,7 +45,7 @@ export function installPreamble(os: OsId): string {
   if (os === "windows") {
     return [
       "if (-not (Get-Command exiftool -ErrorAction SilentlyContinue)) {",
-      "    winget install -e --id OliverBetz.ExifTool",
+      "    winget install -e --id OliverBetz.ExifTool --accept-package-agreements --accept-source-agreements --force",
       '    $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")',
       "}",
     ].join("\n");
