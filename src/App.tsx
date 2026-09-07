@@ -27,6 +27,26 @@ function nowHHMM(): string {
   return `${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}:00`;
 }
 
+const GPS_PRESETS: [string, string][] = [
+  ["27.380583", "33.631839"],
+  ["-4.289303", "31.396239"],
+  ["50.010611", "-110.113422"],
+  ["45.123853", "-123.113603"],
+  ["41.303921", "-81.901693"],
+  ["40.452107", "93.742118"],
+  ["38.483378", "-109.681333"],
+  ["-19.949156", "-69.633842"],
+  ["-25.344375", "131.034401"],
+  ["-20.937631", "164.658489"],
+  ["44.525049", "-110.838190"],
+  ["26.357896", "127.783809"],
+  ["42.967504", "-0.496798"],
+];
+
+function randomGpsPreset(): [string, string] {
+  return GPS_PRESETS[Math.floor(Math.random() * GPS_PRESETS.length)];
+}
+
 export default function App() {
   const [isDark, setIsDark] = useState(prefersDark);
   const [locale, setLocale] = useState<LocaleCode>(initialLocale);
@@ -44,8 +64,9 @@ export default function App() {
   const [overwrite, setOverwrite] = useState(true);
   const [utc, setUtc] = useState(true);
   const [locationEnabled, setLocationEnabled] = useState(false);
-  const [lat, setLat] = useState("48.8566");
-  const [lon, setLon] = useState("2.3522");
+  const [defaultCoords] = useState(randomGpsPreset);
+  const [lat, setLat] = useState(() => defaultCoords[0]);
+  const [lon, setLon] = useState(() => defaultCoords[1]);
   const [exiftoolInstalled, setExiftoolInstalled] = useState(false);
 
   const theme = getTheme(isDark);

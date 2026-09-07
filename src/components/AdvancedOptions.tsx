@@ -128,6 +128,7 @@ export function AdvancedOptions({
                   <input
                     value={lat}
                     onChange={(e) => onLatChange(e.target.value)}
+                    onFocus={(e) => e.target.select()}
                     inputMode="decimal"
                     style={{ background: theme.inputBg, borderColor: theme.border, color: theme.text }}
                     className="w-full rounded-md border px-3 py-2 text-xs sm:text-sm outline-none"
@@ -140,6 +141,7 @@ export function AdvancedOptions({
                   <input
                     value={lon}
                     onChange={(e) => onLonChange(e.target.value)}
+                    onFocus={(e) => e.target.select()}
                     inputMode="decimal"
                     style={{ background: theme.inputBg, borderColor: theme.border, color: theme.text }}
                     className="w-full rounded-md border px-3 py-2 text-xs sm:text-sm outline-none"
