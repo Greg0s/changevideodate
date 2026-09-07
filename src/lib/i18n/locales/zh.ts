@@ -59,9 +59,6 @@ const zh: Translation = {
     copy: "复制",
     copied: "已复制！",
   },
-  footer: {
-    desktopComingSoon: "带图形界面的桌面应用即将推出。",
-  },
 };
 
 export default zh;

@@ -58,9 +58,6 @@ const en = {
     copy: "Copy",
     copied: "Copied!",
   },
-  footer: {
-    desktopComingSoon: "A desktop app with a graphical interface is coming soon.",
-  },
 } satisfies Record<string, unknown>;
 
 export type Translation = typeof en;

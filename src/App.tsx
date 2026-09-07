@@ -1,4 +1,4 @@
-import { Moon, Sparkles, Sun } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { AdvancedOptions } from "./components/AdvancedOptions";
 import { CommandCard } from "./components/CommandCard";
@@ -179,9 +179,16 @@ export default function App() {
           onLonChange={setLon}
         />
 
-        <div style={{ borderColor: theme.border, color: theme.textMuted, fontFamily: SANS_FONT }} className="flex items-center gap-2 text-xs border-t pt-5">
-          <Sparkles size={13} style={{ color: theme.accent }} />
-          {t.footer.desktopComingSoon}
+        <div style={{ borderColor: theme.border, fontFamily: SANS_FONT }} className="flex items-center justify-center text-xs border-t pt-5">
+          <a
+            href="https://gregoiretinn.es"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: theme.textMuted }}
+            className="opacity-25 transition-opacity duration-200 hover:opacity-50"
+          >
+            gregoiretinn.es
+          </a>
         </div>
       </div>
     </div>

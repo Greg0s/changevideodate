@@ -60,9 +60,6 @@ const vi: Translation = {
     copy: "Sao chép",
     copied: "Đã sao chép!",
   },
-  footer: {
-    desktopComingSoon: "Ứng dụng desktop có giao diện đồ họa sắp ra mắt.",
-  },
 };
 
 export default vi;

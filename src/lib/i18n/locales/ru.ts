@@ -60,9 +60,6 @@ const ru: Translation = {
     copy: "Копировать",
     copied: "Скопировано!",
   },
-  footer: {
-    desktopComingSoon: "Настольное приложение с графическим интерфейсом скоро появится.",
-  },
 };
 
 export default ru;

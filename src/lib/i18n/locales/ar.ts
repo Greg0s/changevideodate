@@ -60,9 +60,6 @@ const ar: Translation = {
     copy: "نسخ",
     copied: "تم النسخ!",
   },
-  footer: {
-    desktopComingSoon: "تطبيق سطح مكتب بواجهة رسومية قادم قريبًا.",
-  },
 };
 
 export default ar;
