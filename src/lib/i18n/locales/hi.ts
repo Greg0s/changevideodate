@@ -60,9 +60,6 @@ const hi: Translation = {
     copy: "कॉपी करें",
     copied: "कॉपी हो गया!",
   },
-  footer: {
-    desktopComingSoon: "ग्राफ़िकल इंटरफ़ेस वाला डेस्कटॉप ऐप जल्द ही आ रहा है।",
-  },
 };
 
 export default hi;

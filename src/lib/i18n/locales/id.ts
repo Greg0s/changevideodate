@@ -60,9 +60,6 @@ const id: Translation = {
     copy: "Salin",
     copied: "Disalin!",
   },
-  footer: {
-    desktopComingSoon: "Aplikasi desktop dengan antarmuka grafis akan segera hadir.",
-  },
 };
 
 export default id;

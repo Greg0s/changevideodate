@@ -60,9 +60,6 @@ const it: Translation = {
     copy: "Copia",
     copied: "Copiato!",
   },
-  footer: {
-    desktopComingSoon: "Presto disponibile un'app desktop con interfaccia grafica.",
-  },
 };
 
 export default it;

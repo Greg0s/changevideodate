@@ -60,9 +60,6 @@ const tr: Translation = {
     copy: "Kopyala",
     copied: "Kopyalandı!",
   },
-  footer: {
-    desktopComingSoon: "Grafik arayüzlü bir masaüstü uygulaması yakında geliyor.",
-  },
 };
 
 export default tr;

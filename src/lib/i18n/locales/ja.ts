@@ -60,9 +60,6 @@ const ja: Translation = {
     copy: "コピー",
     copied: "コピーしました！",
   },
-  footer: {
-    desktopComingSoon: "グラフィカルインターフェースを備えたデスクトップアプリを近日公開予定です。",
-  },
 };
 
 export default ja;

@@ -60,9 +60,6 @@ const ko: Translation = {
     copy: "복사",
     copied: "복사됨!",
   },
-  footer: {
-    desktopComingSoon: "그래픽 인터페이스를 갖춘 데스크톱 앱이 곧 출시됩니다.",
-  },
 };
 
 export default ko;
