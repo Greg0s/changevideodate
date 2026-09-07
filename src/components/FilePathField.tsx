@@ -50,6 +50,7 @@ export function FilePathField({ os, value, onChange, theme, t }: FilePathFieldPr
       <input
         value={value}
         onChange={(e) => onChange(e.target.value)}
+        onFocus={(e) => e.target.select()}
         style={{ background: theme.inputBg, borderColor: theme.border, color: theme.text }}
         className="w-full rounded-md border px-3 py-2 text-xs sm:text-sm outline-none"
         placeholder={defaultPath(os)}
