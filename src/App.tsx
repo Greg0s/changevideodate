@@ -11,7 +11,7 @@ import { initialLocale, storeLocale } from "./lib/i18n/detect";
 import { localeDir, type LocaleCode } from "./lib/i18n/languages";
 import { getTranslation } from "./lib/i18n/translations";
 import { defaultPath, detectOs, shellName } from "./lib/os";
-import { loadStoredExiftoolInstalled, storeExiftoolInstalled } from "./lib/preferences";
+import { loadStoredExiftoolInstalled, loadStoredOs, storeExiftoolInstalled, storeOs } from "./lib/preferences";
 import { MONO_FONT, SANS_FONT, getTheme, prefersDark } from "./lib/theme";
 import type { DateTagOptions, OsId } from "./lib/types";
 
@@ -51,8 +51,8 @@ function randomGpsPreset(): [string, string] {
 export default function App() {
   const [isDark, setIsDark] = useState(prefersDark);
   const [locale, setLocale] = useState<LocaleCode>(initialLocale);
-  const [os, setOs] = useState<OsId>(detectOs);
-  const [filePath, setFilePath] = useState(() => defaultPath(detectOs()));
+  const [os, setOs] = useState<OsId>(() => loadStoredOs() ?? detectOs());
+  const [filePath, setFilePath] = useState(() => defaultPath(loadStoredOs() ?? detectOs()));
   const [pathTouched, setPathTouched] = useState(false);
   const [date, setDate] = useState(todayISO);
   const [time, setTime] = useState(nowHHMM);
@@ -88,6 +88,7 @@ export default function App() {
   function handleOsChange(next: OsId) {
     if (!pathTouched) setFilePath(defaultPath(next));
     setOs(next);
+    storeOs(next);
   }
 
   function handleFilePathChange(value: string) {
