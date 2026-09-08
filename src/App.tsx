@@ -11,6 +11,7 @@ import { initialLocale, storeLocale } from "./lib/i18n/detect";
 import { localeDir, type LocaleCode } from "./lib/i18n/languages";
 import { getTranslation } from "./lib/i18n/translations";
 import { defaultPath, detectOs, shellName } from "./lib/os";
+import { loadStoredExiftoolInstalled, storeExiftoolInstalled } from "./lib/preferences";
 import { MONO_FONT, SANS_FONT, getTheme, prefersDark } from "./lib/theme";
 import type { DateTagOptions, OsId } from "./lib/types";
 
@@ -67,7 +68,7 @@ export default function App() {
   const [defaultCoords] = useState(randomGpsPreset);
   const [lat, setLat] = useState(() => defaultCoords[0]);
   const [lon, setLon] = useState(() => defaultCoords[1]);
-  const [exiftoolInstalled, setExiftoolInstalled] = useState(false);
+  const [exiftoolInstalled, setExiftoolInstalled] = useState(loadStoredExiftoolInstalled);
 
   const theme = getTheme(isDark);
   const t = getTranslation(locale);
@@ -92,6 +93,11 @@ export default function App() {
   function handleFilePathChange(value: string) {
     setFilePath(value);
     setPathTouched(true);
+  }
+
+  function handleExiftoolInstalledChange(value: boolean) {
+    setExiftoolInstalled(value);
+    storeExiftoolInstalled(value);
   }
 
   const segments = useMemo(
@@ -149,7 +155,7 @@ export default function App() {
 
         <div className="flex items-center justify-between gap-4 mb-4">
           <OsSelector os={os} onChange={handleOsChange} theme={theme} t={t} />
-          <ExiftoolInstalledToggle checked={exiftoolInstalled} onChange={setExiftoolInstalled} theme={theme} t={t} />
+          <ExiftoolInstalledToggle checked={exiftoolInstalled} onChange={handleExiftoolInstalledChange} theme={theme} t={t} />
         </div>
 
         <CommandCard segments={segments} shellName={shellName(os)} theme={theme} t={t} />
