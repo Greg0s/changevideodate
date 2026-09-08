@@ -26,6 +26,8 @@ const de: Translation = {
   filePath: {
     label: "Dateipfad",
     getPath: "Pfad ermitteln:",
+    dragHint: "oder Datei per Drag & Drop hierher ziehen",
+    dropActive: "Loslassen, um den Dateinamen einzufügen",
   },
   pathTooltip: {
     windows: {

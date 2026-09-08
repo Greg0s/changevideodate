@@ -26,6 +26,8 @@ const vi: Translation = {
   filePath: {
     label: "Đường dẫn tệp",
     getPath: "Lấy đường dẫn:",
+    dragHint: "hoặc kéo và thả tệp vào đây",
+    dropActive: "Thả để điền tên tệp",
   },
   pathTooltip: {
     windows: {

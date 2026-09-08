@@ -1,6 +1,6 @@
 import { Info } from "lucide-react";
 import { useState } from "react";
-import { defaultPath } from "../lib/os";
+import { defaultPath, withFileName } from "../lib/os";
 import { SANS_FONT } from "../lib/theme";
 import type { Translation } from "../lib/i18n/translations";
 import type { OsId, Theme } from "../lib/types";
@@ -15,7 +15,22 @@ interface FilePathFieldProps {
 
 export function FilePathField({ os, value, onChange, theme, t }: FilePathFieldProps) {
   const [tooltipOpen, setTooltipOpen] = useState(false);
+  const [isDragOver, setIsDragOver] = useState(false);
   const tip = t.pathTooltip[os];
+
+  function handleDragOver(e: React.DragEvent<HTMLInputElement>) {
+    if (!e.dataTransfer.types.includes("Files")) return;
+    e.preventDefault();
+    setIsDragOver(true);
+  }
+
+  function handleDrop(e: React.DragEvent<HTMLInputElement>) {
+    e.preventDefault();
+    setIsDragOver(false);
+    const file = e.dataTransfer.files[0];
+    if (!file) return;
+    onChange(withFileName(os, value, file.name));
+  }
 
   return (
     <div className="sm:col-span-3 relative">
@@ -51,13 +66,23 @@ export function FilePathField({ os, value, onChange, theme, t }: FilePathFieldPr
         value={value}
         onChange={(e) => onChange(e.target.value)}
         onFocus={(e) => e.target.select()}
-        style={{ background: theme.inputBg, borderColor: theme.border, color: theme.text }}
-        className="w-full rounded-md border px-3 py-2 text-xs sm:text-sm outline-none"
+        onDragOver={handleDragOver}
+        onDragLeave={() => setIsDragOver(false)}
+        onDrop={handleDrop}
+        style={{
+          background: theme.inputBg,
+          borderColor: isDragOver ? theme.accent : theme.border,
+          color: theme.text,
+        }}
+        className="w-full rounded-md border px-3 py-2 text-xs sm:text-sm outline-none transition-colors"
         placeholder={defaultPath(os)}
         spellCheck={false}
         autoCapitalize="off"
         autoCorrect="off"
       />
+      <p style={{ color: isDragOver ? theme.accent : theme.textMuted, fontFamily: SANS_FONT }} className="text-[11px] mt-1">
+        {isDragOver ? t.filePath.dropActive : t.filePath.dragHint}
+      </p>
     </div>
   );
 }

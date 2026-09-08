@@ -26,6 +26,8 @@ const ru: Translation = {
   filePath: {
     label: "Путь к файлу",
     getPath: "Получить путь:",
+    dragHint: "или перетащите файл сюда",
+    dropActive: "Отпустите, чтобы вставить имя файла",
   },
   pathTooltip: {
     windows: {

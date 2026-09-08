@@ -24,6 +24,8 @@ const en = {
   filePath: {
     label: "File path",
     getPath: "Get the path:",
+    dragHint: "or drag & drop the file here",
+    dropActive: "Drop to fill in the file name",
   },
   pathTooltip: {
     windows: {

@@ -26,6 +26,8 @@ const es: Translation = {
   filePath: {
     label: "Ruta del archivo",
     getPath: "Obtener la ruta:",
+    dragHint: "o arrastra y suelta el archivo aquí",
+    dropActive: "Suelta para completar el nombre del archivo",
   },
   pathTooltip: {
     windows: {

@@ -26,6 +26,8 @@ const id: Translation = {
   filePath: {
     label: "Jalur berkas",
     getPath: "Dapatkan jalurnya:",
+    dragHint: "atau seret dan lepas berkas di sini",
+    dropActive: "Lepaskan untuk mengisi nama berkas",
   },
   pathTooltip: {
     windows: {

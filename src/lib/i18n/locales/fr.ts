@@ -26,6 +26,8 @@ const fr: Translation = {
   filePath: {
     label: "Chemin du fichier",
     getPath: "Obtenir le chemin :",
+    dragHint: "ou glissez-déposez le fichier ici",
+    dropActive: "Déposez pour remplir le nom du fichier",
   },
   pathTooltip: {
     windows: {

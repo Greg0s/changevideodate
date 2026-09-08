@@ -25,6 +25,8 @@ const zh: Translation = {
   filePath: {
     label: "文件路径",
     getPath: "获取路径：",
+    dragHint: "或将文件拖放到此处",
+    dropActive: "松开以填入文件名",
   },
   pathTooltip: {
     windows: {

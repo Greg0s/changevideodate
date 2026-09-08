@@ -56,6 +56,19 @@ export function installPreamble(os: OsId): string {
   return "command -v exiftool >/dev/null 2>&1 || { brew install exiftool && hash -r; } &&";
 }
 
+/**
+ * Swaps the file name at the end of a path for `fileName`, keeping the existing directory.
+ * Browsers never expose a dropped/selected file's real filesystem path (only its name), so
+ * this is how drag-and-drop fills the field: it keeps whatever directory the user already has
+ * and just corrects the file name/extension to match the dropped file.
+ */
+export function withFileName(os: OsId, path: string, fileName: string): string {
+  const sep = os === "windows" ? "\\" : "/";
+  const idx = path.lastIndexOf(sep);
+  const dir = idx >= 0 ? path.slice(0, idx + 1) : "";
+  return dir + fileName;
+}
+
 /** Wraps a value the way each shell expects a "flag=value with spaces" token to be quoted. */
 export function quoteForOs(os: OsId, value: string): string {
   return os === "windows" ? `"${value}"` : `'${value}'`;

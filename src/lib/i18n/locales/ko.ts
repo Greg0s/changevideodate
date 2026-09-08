@@ -26,6 +26,8 @@ const ko: Translation = {
   filePath: {
     label: "파일 경로",
     getPath: "경로 가져오기:",
+    dragHint: "또는 파일을 여기로 드래그 앤 드롭하세요",
+    dropActive: "놓으면 파일 이름이 채워집니다",
   },
   pathTooltip: {
     windows: {

@@ -26,6 +26,8 @@ const ar: Translation = {
   filePath: {
     label: "مسار الملف",
     getPath: "الحصول على المسار:",
+    dragHint: "أو اسحب الملف وأفلته هنا",
+    dropActive: "أفلت لملء اسم الملف",
   },
   pathTooltip: {
     windows: {

@@ -26,6 +26,8 @@ const tr: Translation = {
   filePath: {
     label: "Dosya yolu",
     getPath: "Yolu al:",
+    dragHint: "veya dosyayı buraya sürükleyip bırakın",
+    dropActive: "Dosya adını doldurmak için bırakın",
   },
   pathTooltip: {
     windows: {

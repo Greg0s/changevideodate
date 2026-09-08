@@ -26,6 +26,8 @@ const ja: Translation = {
   filePath: {
     label: "ファイルパス",
     getPath: "パスを取得：",
+    dragHint: "またはファイルをここにドラッグ＆ドロップ",
+    dropActive: "ドロップしてファイル名を入力",
   },
   pathTooltip: {
     windows: {

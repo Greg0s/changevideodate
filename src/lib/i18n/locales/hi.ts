@@ -26,6 +26,8 @@ const hi: Translation = {
   filePath: {
     label: "फ़ाइल पथ",
     getPath: "पथ प्राप्त करें:",
+    dragHint: "या फ़ाइल को यहाँ खींचकर छोड़ें",
+    dropActive: "फ़ाइल का नाम भरने के लिए छोड़ें",
   },
   pathTooltip: {
     windows: {
