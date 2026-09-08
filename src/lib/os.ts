@@ -7,7 +7,9 @@ export const OS_OPTIONS: { id: OsId; label: string }[] = [
 ];
 
 /**
- * Detects the visitor's OS from the browser. Falls back to windows, then
+ * Detects the visitor's OS from the browser. Android maps to windows and
+ * iOS maps to macOS (mobile users are assumed to be transferring files
+ * to/from a desktop of that flavor); otherwise falls back to windows, then
  * macOS, then linux when detection is ambiguous, per product spec.
  */
 export function detectOs(): OsId {
@@ -17,11 +19,12 @@ export function detectOs(): OsId {
     .userAgentData;
   const haystack = `${uaData?.platform ?? ""} ${navigator.platform ?? ""} ${navigator.userAgent ?? ""}`.toLowerCase();
 
+  if (haystack.includes("android")) return "windows";
   if (haystack.includes("win")) return "windows";
   if (haystack.includes("mac") || haystack.includes("iphone") || haystack.includes("ipad")) {
     return "macos";
   }
-  if (haystack.includes("linux") || haystack.includes("x11") || haystack.includes("android")) {
+  if (haystack.includes("linux") || haystack.includes("x11")) {
     return "linux";
   }
 
