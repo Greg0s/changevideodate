@@ -2,6 +2,11 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+**Keep this file current.** When a change adds, removes, moves, or renames something described below — a
+file, a component, a behavior, a config flag, a command — update the corresponding section(s) as part of
+that same change, not as a follow-up. A CLAUDE.md that no longer matches the code is a bug in the change
+that broke it, on the same footing as a failing build or lint.
+
 ## Project
 
 `changevideodate` is a client-only web app that generates an [ExifTool](https://exiftool.org/) command
