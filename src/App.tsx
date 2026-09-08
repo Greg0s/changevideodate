@@ -153,7 +153,7 @@ export default function App() {
           </div>
         </header>
 
-        <div className="flex items-center justify-between gap-4 mb-4">
+        <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
           <OsSelector os={os} onChange={handleOsChange} theme={theme} t={t} />
           <ExiftoolInstalledToggle checked={exiftoolInstalled} onChange={handleExiftoolInstalledChange} theme={theme} t={t} />
         </div>
