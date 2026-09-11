@@ -48,6 +48,12 @@ const zh: Translation = {
     editLocation: "编辑位置",
     latitude: "纬度",
     longitude: "经度",
+    map: {
+      show: "显示地图",
+      hide: "隐藏地图",
+      loading: "地图加载中…",
+      hint: "点击地图或拖动标记以设置坐标。显示地图会从 OpenStreetMap 加载瓦片。",
+    },
     tagMeanings: {
       createDate: "创建日期",
       mediaCreateDate: "媒体创建日期",

@@ -49,6 +49,12 @@ const ko: Translation = {
     editLocation: "위치 편집",
     latitude: "위도",
     longitude: "경도",
+    map: {
+      show: "지도 표시",
+      hide: "지도 숨기기",
+      loading: "지도를 불러오는 중…",
+      hint: "지도를 클릭하거나 마커를 드래그하여 좌표를 설정하세요. 지도를 표시하면 OpenStreetMap에서 타일을 불러옵니다.",
+    },
     tagMeanings: {
       createDate: "생성일",
       mediaCreateDate: "미디어 생성일",

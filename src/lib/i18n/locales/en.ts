@@ -47,6 +47,12 @@ const en = {
     editLocation: "Edit location",
     latitude: "Latitude",
     longitude: "Longitude",
+    map: {
+      show: "Show map",
+      hide: "Hide map",
+      loading: "Loading map…",
+      hint: "Click the map or drag the marker to set the coordinates. Loading the map fetches tiles from OpenStreetMap.",
+    },
     tagMeanings: {
       createDate: "Creation date",
       mediaCreateDate: "Media creation date",

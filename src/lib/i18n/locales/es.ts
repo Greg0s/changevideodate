@@ -49,6 +49,12 @@ const es: Translation = {
     editLocation: "Editar ubicación",
     latitude: "Latitud",
     longitude: "Longitud",
+    map: {
+      show: "Mostrar mapa",
+      hide: "Ocultar mapa",
+      loading: "Cargando mapa…",
+      hint: "Haz clic en el mapa o arrastra el marcador para definir las coordenadas. Al mostrar el mapa se cargan teselas desde OpenStreetMap.",
+    },
     tagMeanings: {
       createDate: "Fecha de creación",
       mediaCreateDate: "Fecha de creación del medio",
