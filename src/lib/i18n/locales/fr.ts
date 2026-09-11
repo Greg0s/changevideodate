@@ -49,6 +49,12 @@ const fr: Translation = {
     editLocation: "Modifier la position",
     latitude: "Latitude",
     longitude: "Longitude",
+    map: {
+      show: "Afficher la carte",
+      hide: "Masquer la carte",
+      loading: "Chargement de la carte…",
+      hint: "Cliquez sur la carte ou faites glisser le repère pour définir les coordonnées. L'affichage de la carte charge des tuiles depuis OpenStreetMap.",
+    },
     tagMeanings: {
       createDate: "Date de création",
       mediaCreateDate: "Date de création du média",

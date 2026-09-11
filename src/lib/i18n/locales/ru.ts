@@ -49,6 +49,12 @@ const ru: Translation = {
     editLocation: "Изменить местоположение",
     latitude: "Широта",
     longitude: "Долгота",
+    map: {
+      show: "Показать карту",
+      hide: "Скрыть карту",
+      loading: "Загрузка карты…",
+      hint: "Щёлкните по карте или перетащите маркер, чтобы задать координаты. При открытии карты загружаются тайлы с OpenStreetMap.",
+    },
     tagMeanings: {
       createDate: "Дата создания",
       mediaCreateDate: "Дата создания медиа",

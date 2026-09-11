@@ -49,6 +49,12 @@ const it: Translation = {
     editLocation: "Modifica posizione",
     latitude: "Latitudine",
     longitude: "Longitudine",
+    map: {
+      show: "Mostra mappa",
+      hide: "Nascondi mappa",
+      loading: "Caricamento mappa…",
+      hint: "Fai clic sulla mappa o trascina il segnaposto per impostare le coordinate. La visualizzazione della mappa carica i tile da OpenStreetMap.",
+    },
     tagMeanings: {
       createDate: "Data di creazione",
       mediaCreateDate: "Data di creazione del media",

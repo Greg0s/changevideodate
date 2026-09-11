@@ -4,10 +4,12 @@ import { TAG_LABELS } from "../lib/command";
 import { SANS_FONT } from "../lib/theme";
 import type { Translation } from "../lib/i18n/translations";
 import type { DateTagOptions, Theme } from "../lib/types";
+import { LocationMap } from "./LocationMap";
 
 interface AdvancedOptionsProps {
   theme: Theme;
   t: Translation;
+  isDark: boolean;
   tags: DateTagOptions;
   onTagsChange: (tags: DateTagOptions) => void;
   overwrite: boolean;
@@ -27,6 +29,7 @@ const TAG_KEYS = Object.keys(TAG_LABELS) as (keyof DateTagOptions)[];
 export function AdvancedOptions({
   theme,
   t,
+  isDark,
   tags,
   onTagsChange,
   overwrite,
@@ -145,6 +148,17 @@ export function AdvancedOptions({
                     inputMode="decimal"
                     style={{ background: theme.inputBg, borderColor: theme.border, color: theme.text }}
                     className="w-full rounded-md border px-3 py-2 text-xs sm:text-sm outline-none"
+                  />
+                </div>
+                <div className="col-span-2">
+                  <LocationMap
+                    theme={theme}
+                    t={t}
+                    isDark={isDark}
+                    lat={lat}
+                    lon={lon}
+                    onLatChange={onLatChange}
+                    onLonChange={onLonChange}
                   />
                 </div>
               </div>

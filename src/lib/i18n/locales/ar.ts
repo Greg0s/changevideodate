@@ -49,6 +49,12 @@ const ar: Translation = {
     editLocation: "تعديل الموقع الجغرافي",
     latitude: "خط العرض",
     longitude: "خط الطول",
+    map: {
+      show: "إظهار الخريطة",
+      hide: "إخفاء الخريطة",
+      loading: "جارٍ تحميل الخريطة…",
+      hint: "انقر على الخريطة أو اسحب العلامة لتحديد الإحداثيات. يؤدي إظهار الخريطة إلى تحميل بلاطات من OpenStreetMap.",
+    },
     tagMeanings: {
       createDate: "تاريخ الإنشاء",
       mediaCreateDate: "تاريخ إنشاء الوسائط",

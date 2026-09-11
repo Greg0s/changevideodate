@@ -49,6 +49,12 @@ const ja: Translation = {
     editLocation: "位置情報を編集",
     latitude: "緯度",
     longitude: "経度",
+    map: {
+      show: "地図を表示",
+      hide: "地図を隠す",
+      loading: "地図を読み込み中…",
+      hint: "地図をクリックするか、マーカーをドラッグして座標を設定します。地図を表示するとOpenStreetMapからタイルを読み込みます。",
+    },
     tagMeanings: {
       createDate: "作成日",
       mediaCreateDate: "メディア作成日",

@@ -49,6 +49,12 @@ const id: Translation = {
     editLocation: "Edit lokasi",
     latitude: "Lintang",
     longitude: "Bujur",
+    map: {
+      show: "Tampilkan peta",
+      hide: "Sembunyikan peta",
+      loading: "Memuat peta…",
+      hint: "Klik peta atau seret penanda untuk mengatur koordinat. Menampilkan peta akan memuat tile dari OpenStreetMap.",
+    },
     tagMeanings: {
       createDate: "Tanggal pembuatan",
       mediaCreateDate: "Tanggal pembuatan media",

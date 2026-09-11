@@ -49,6 +49,12 @@ const tr: Translation = {
     editLocation: "Konumu düzenle",
     latitude: "Enlem",
     longitude: "Boylam",
+    map: {
+      show: "Haritayı göster",
+      hide: "Haritayı gizle",
+      loading: "Harita yükleniyor…",
+      hint: "Koordinatları ayarlamak için haritaya tıklayın veya işaretçiyi sürükleyin. Haritayı göstermek OpenStreetMap'ten karo (tile) yükler.",
+    },
     tagMeanings: {
       createDate: "Oluşturulma tarihi",
       mediaCreateDate: "Medya oluşturulma tarihi",

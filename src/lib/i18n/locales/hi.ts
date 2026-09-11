@@ -49,6 +49,12 @@ const hi: Translation = {
     editLocation: "स्थान संपादित करें",
     latitude: "अक्षांश",
     longitude: "देशांतर",
+    map: {
+      show: "मानचित्र दिखाएं",
+      hide: "मानचित्र छिपाएं",
+      loading: "मानचित्र लोड हो रहा है…",
+      hint: "निर्देशांक सेट करने के लिए मानचित्र पर क्लिक करें या मार्कर को खींचें। मानचित्र दिखाने पर OpenStreetMap से टाइल लोड होते हैं।",
+    },
     tagMeanings: {
       createDate: "निर्माण तिथि",
       mediaCreateDate: "मीडिया निर्माण तिथि",

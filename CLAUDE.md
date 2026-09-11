@@ -13,7 +13,9 @@ that broke it, on the same footing as a failing build or lint.
 for changing the date/time metadata of a video file (MP4/MOV). The user picks an OS (Windows/macOS/Linux),
 a file path, a date/time, and a few options; the app builds the equivalent shell command live in the
 browser. Nothing is uploaded — there is no backend, and no video file is ever read or processed by the app
-itself. The generated command is meant to be copy-pasted into the user's own terminal.
+itself. The generated command is meant to be copy-pasted into the user's own terminal. The one exception to
+"nothing over the network" is the optional location map (see `LocationMap` below): opening it fetches map
+tiles from OpenStreetMap.
 
 Deployed as a static site to GitHub Pages: `.github/workflows/deploy.yml` builds and publishes `dist/` on
 every push to `main`, served at the custom domain in `public/CNAME` (`changevideodate.gregoiretinn.es`).
@@ -90,7 +92,18 @@ all state lives in `App.tsx` via `useState`.
   - `CommandCard` — renders the generated command with per-segment coloring and a copy-to-clipboard button.
   - `FilePathField` — file path input plus an OS-specific tooltip (from `t.pathTooltip[os]`) on how to
     obtain the path.
-  - `AdvancedOptions` — collapsible panel for tag toggles, UTC/overwrite checkboxes, and GPS lat/lon.
+  - `AdvancedOptions` — collapsible panel for tag toggles, UTC/overwrite checkboxes, and GPS lat/lon; when
+    "Edit location" is on, also renders `LocationMap` below the lat/lon inputs.
+  - `LocationMap` — its own collapsible panel ("Show map"/"Hide map", closed by default) nested inside
+    `AdvancedOptions`'s location section. Lazy-loads `LocationMapPanel` via `React.lazy` (a separate build
+    chunk — confirm with `npm run build` that `LocationMapPanel` still lists as its own `dist/assets/`
+    entry) so Leaflet is only downloaded once a user actually opens the map.
+  - `LocationMapPanel` — imperatively mounts a Leaflet map (OpenStreetMap raster tiles) into a ref'd div.
+    Clicking the map or dragging the marker calls `onLatChange`/`onLonChange` (formatted to 6 decimals);
+    typing in the lat/lon text inputs recenters the map and marker the other way (a `skipNextSyncRef` guard
+    stops that second path from fighting the first when a map interaction is what triggered the lat/lon
+    change). In dark mode an `invert()` CSS filter is applied to the Leaflet tile pane specifically (not the
+    marker pane) since OpenStreetMap only serves one, light-mode tile style.
   - `LanguageSelector` — icon button (next to the theme toggle) opening a searchable dropdown of the 15
     languages in `LANGUAGES`; selecting one calls back up to `App.tsx`.
 

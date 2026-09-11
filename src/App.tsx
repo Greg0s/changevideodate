@@ -193,6 +193,7 @@ export default function App() {
         <AdvancedOptions
           theme={theme}
           t={t}
+          isDark={isDark}
           tags={tags}
           onTagsChange={setTags}
           overwrite={overwrite}
