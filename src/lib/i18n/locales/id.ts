@@ -28,15 +28,10 @@ const id: Translation = {
     getPath: "Dapatkan jalurnya:",
   },
   pathTooltip: {
-    windows: {
-      steps: ["Klik kanan pada berkas", "Salin sebagai jalur"],
-    },
-    macos: {
-      steps: ["⌥ (Option) + klik kanan pada berkas", 'Salin "clip.mp4" sebagai Nama Jalur'],
-    },
-    linux: {
-      steps: ["Klik kanan pada berkas (Nautilus, Dolphin…)", "Salin lokasi"],
-    },
+    howTo: "{action}, lalu \"{menuItem}\"",
+    windows: { action: "Klik kanan pada berkas", menuItem: "Salin sebagai jalur" },
+    macos: { action: "⌥ (Option) + klik kanan pada berkas", menuItem: "Salin '{file}' sebagai Nama Jalur" },
+    linux: { action: "Klik kanan pada berkas", menuItem: "Salin lokasi" },
   },
   date: { label: "Tanggal" },
   time: { label: "Waktu" },
@@ -50,8 +45,6 @@ const id: Translation = {
     latitude: "Lintang",
     longitude: "Bujur",
     map: {
-      show: "Tampilkan peta",
-      hide: "Sembunyikan peta",
       loading: "Memuat peta…",
       hint: "Klik peta atau seret penanda untuk mengatur koordinat. Menampilkan peta akan memuat tile dari OpenStreetMap.",
     },

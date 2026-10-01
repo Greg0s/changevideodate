@@ -28,15 +28,10 @@ const vi: Translation = {
     getPath: "Lấy đường dẫn:",
   },
   pathTooltip: {
-    windows: {
-      steps: ["Nhấp chuột phải vào tệp", "Sao chép dưới dạng đường dẫn"],
-    },
-    macos: {
-      steps: ["⌥ (Option) + nhấp chuột phải vào tệp", 'Sao chép "clip.mp4" dưới dạng đường dẫn'],
-    },
-    linux: {
-      steps: ["Nhấp chuột phải vào tệp (Nautilus, Dolphin…)", "Sao chép vị trí"],
-    },
+    howTo: "{action}, sau đó chọn \"{menuItem}\"",
+    windows: { action: "Nhấp chuột phải vào tệp", menuItem: "Sao chép dưới dạng đường dẫn" },
+    macos: { action: "⌥ (Option) + nhấp chuột phải vào tệp", menuItem: "Sao chép '{file}' dưới dạng đường dẫn" },
+    linux: { action: "Nhấp chuột phải vào tệp", menuItem: "Sao chép vị trí" },
   },
   date: { label: "Ngày" },
   time: { label: "Giờ" },
@@ -50,8 +45,6 @@ const vi: Translation = {
     latitude: "Vĩ độ",
     longitude: "Kinh độ",
     map: {
-      show: "Hiện bản đồ",
-      hide: "Ẩn bản đồ",
       loading: "Đang tải bản đồ…",
       hint: "Nhấp vào bản đồ hoặc kéo điểm đánh dấu để đặt tọa độ. Hiện bản đồ sẽ tải các ô bản đồ (tile) từ OpenStreetMap.",
     },

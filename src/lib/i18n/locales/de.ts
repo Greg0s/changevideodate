@@ -28,15 +28,10 @@ const de: Translation = {
     getPath: "Pfad ermitteln:",
   },
   pathTooltip: {
-    windows: {
-      steps: ["Rechtsklick auf die Datei", "Als Pfad kopieren"],
-    },
-    macos: {
-      steps: ["⌥ (Option) + Rechtsklick auf die Datei", '„clip.mp4" als Pfadname kopieren'],
-    },
-    linux: {
-      steps: ["Rechtsklick auf die Datei (Nautilus, Dolphin…)", "Ort kopieren"],
-    },
+    howTo: "{action}, dann „{menuItem}“",
+    windows: { action: "Rechtsklick auf die Datei", menuItem: "Als Pfad kopieren" },
+    macos: { action: "⌥ (Option) + Rechtsklick auf die Datei", menuItem: "„{file}“ als Pfadname kopieren" },
+    linux: { action: "Rechtsklick auf die Datei", menuItem: "Ort kopieren" },
   },
   date: { label: "Datum" },
   time: { label: "Uhrzeit" },
@@ -50,8 +45,6 @@ const de: Translation = {
     latitude: "Breitengrad",
     longitude: "Längengrad",
     map: {
-      show: "Karte anzeigen",
-      hide: "Karte ausblenden",
       loading: "Karte wird geladen…",
       hint: "Klicken Sie auf die Karte oder ziehen Sie den Marker, um die Koordinaten festzulegen. Beim Anzeigen der Karte werden Kacheln von OpenStreetMap geladen.",
     },

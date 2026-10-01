@@ -28,15 +28,10 @@ const es: Translation = {
     getPath: "Obtener la ruta:",
   },
   pathTooltip: {
-    windows: {
-      steps: ["Clic derecho en el archivo", "Copiar como ruta de acceso"],
-    },
-    macos: {
-      steps: ["⌥ (Opción) + clic derecho en el archivo", 'Copiar "clip.mp4" como ruta'],
-    },
-    linux: {
-      steps: ["Clic derecho en el archivo (Nautilus, Dolphin…)", "Copiar ubicación"],
-    },
+    howTo: "{action} y luego «{menuItem}»",
+    windows: { action: "Clic derecho en el archivo", menuItem: "Copiar como ruta de acceso" },
+    macos: { action: "⌥ (Opción) + clic derecho en el archivo", menuItem: "Copiar \"{file}\" como nombre de ruta" },
+    linux: { action: "Clic derecho en el archivo", menuItem: "Copiar ubicación" },
   },
   date: { label: "Fecha" },
   time: { label: "Hora" },
@@ -50,8 +45,6 @@ const es: Translation = {
     latitude: "Latitud",
     longitude: "Longitud",
     map: {
-      show: "Mostrar mapa",
-      hide: "Ocultar mapa",
       loading: "Cargando mapa…",
       hint: "Haz clic en el mapa o arrastra el marcador para definir las coordenadas. Al mostrar el mapa se cargan teselas desde OpenStreetMap.",
     },

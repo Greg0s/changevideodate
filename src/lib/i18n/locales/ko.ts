@@ -28,15 +28,10 @@ const ko: Translation = {
     getPath: "경로 가져오기:",
   },
   pathTooltip: {
-    windows: {
-      steps: ["파일 우클릭", "경로로 복사"],
-    },
-    macos: {
-      steps: ["⌥ (Option) + 파일 우클릭", '"clip.mp4"를 경로 이름으로 복사'],
-    },
-    linux: {
-      steps: ["파일 우클릭 (Nautilus, Dolphin 등)", "위치 복사"],
-    },
+    howTo: "{action}한 후 \"{menuItem}\" 선택",
+    windows: { action: "파일을 우클릭", menuItem: "경로로 복사" },
+    macos: { action: "⌥ (Option) + 파일을 우클릭", menuItem: "'{file}'을(를) 경로 이름으로 복사" },
+    linux: { action: "파일을 우클릭", menuItem: "위치 복사" },
   },
   date: { label: "날짜" },
   time: { label: "시간" },
@@ -50,8 +45,6 @@ const ko: Translation = {
     latitude: "위도",
     longitude: "경도",
     map: {
-      show: "지도 표시",
-      hide: "지도 숨기기",
       loading: "지도를 불러오는 중…",
       hint: "지도를 클릭하거나 마커를 드래그하여 좌표를 설정하세요. 지도를 표시하면 OpenStreetMap에서 타일을 불러옵니다.",
     },

@@ -28,15 +28,10 @@ const ja: Translation = {
     getPath: "パスを取得：",
   },
   pathTooltip: {
-    windows: {
-      steps: ["ファイルを右クリック", "パスとしてコピー"],
-    },
-    macos: {
-      steps: ["⌥（Option）+ ファイルを右クリック", "「clip.mp4」をパス名としてコピー"],
-    },
-    linux: {
-      steps: ["ファイルを右クリック（Nautilus、Dolphin など）", "場所をコピー"],
-    },
+    howTo: "{action}し、「{menuItem}」を選択",
+    windows: { action: "ファイルを右クリック", menuItem: "パスとしてコピー" },
+    macos: { action: "⌥（Option）+ ファイルを右クリック", menuItem: "“{file}”をパス名としてコピー" },
+    linux: { action: "ファイルを右クリック", menuItem: "場所をコピー" },
   },
   date: { label: "日付" },
   time: { label: "時刻" },
@@ -50,8 +45,6 @@ const ja: Translation = {
     latitude: "緯度",
     longitude: "経度",
     map: {
-      show: "地図を表示",
-      hide: "地図を隠す",
       loading: "地図を読み込み中…",
       hint: "地図をクリックするか、マーカーをドラッグして座標を設定します。地図を表示するとOpenStreetMapからタイルを読み込みます。",
     },

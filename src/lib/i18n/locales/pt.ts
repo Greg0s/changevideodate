@@ -28,15 +28,10 @@ const pt: Translation = {
     getPath: "Obter o caminho:",
   },
   pathTooltip: {
-    windows: {
-      steps: ["Clique com o botão direito no arquivo", "Copiar como caminho"],
-    },
-    macos: {
-      steps: ["⌥ (Option) + clique com o botão direito no arquivo", 'Copiar "clip.mp4" como Nome do Caminho'],
-    },
-    linux: {
-      steps: ["Clique com o botão direito no arquivo (Nautilus, Dolphin…)", "Copiar localização"],
-    },
+    howTo: "{action} e depois \"{menuItem}\"",
+    windows: { action: "Clique com o botão direito no arquivo", menuItem: "Copiar como caminho" },
+    macos: { action: "⌥ (Option) + clique com o botão direito no arquivo", menuItem: "Copiar \"{file}\" como Nome do Caminho" },
+    linux: { action: "Clique com o botão direito no arquivo", menuItem: "Copiar localização" },
   },
   date: { label: "Data" },
   time: { label: "Hora" },
@@ -50,8 +45,6 @@ const pt: Translation = {
     latitude: "Latitude",
     longitude: "Longitude",
     map: {
-      show: "Mostrar mapa",
-      hide: "Ocultar mapa",
       loading: "Carregando mapa…",
       hint: "Clique no mapa ou arraste o marcador para definir as coordenadas. Exibir o mapa carrega blocos (tiles) do OpenStreetMap.",
     },
