@@ -27,15 +27,10 @@ const zh: Translation = {
     getPath: "获取路径：",
   },
   pathTooltip: {
-    windows: {
-      steps: ["右键点击文件", "复制为路径"],
-    },
-    macos: {
-      steps: ["⌥（Option）+ 右键点击文件", '将 "clip.mp4" 拷贝为路径名称'],
-    },
-    linux: {
-      steps: ["右键点击文件（Nautilus、Dolphin 等）", "复制位置"],
-    },
+    howTo: "{action}，然后选择“{menuItem}”",
+    windows: { action: "右键点击文件", menuItem: "复制为路径" },
+    macos: { action: "⌥（Option）+ 右键点击文件", menuItem: "将「{file}」拷贝为路径名称" },
+    linux: { action: "右键点击文件", menuItem: "复制位置" },
   },
   date: { label: "日期" },
   time: { label: "时间" },

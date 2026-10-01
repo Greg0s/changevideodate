@@ -28,15 +28,10 @@ const ar: Translation = {
     getPath: "الحصول على المسار:",
   },
   pathTooltip: {
-    windows: {
-      steps: ["النقر بزر الماوس الأيمن على الملف", "نسخ كمسار"],
-    },
-    macos: {
-      steps: ["⌥ (Option) + النقر بزر الماوس الأيمن على الملف", 'نسخ "clip.mp4" كمسار'],
-    },
-    linux: {
-      steps: ["النقر بزر الماوس الأيمن على الملف (Nautilus، Dolphin…)", "نسخ الموقع"],
-    },
+    howTo: "{action}، ثم «{menuItem}»",
+    windows: { action: "النقر بزر الماوس الأيمن على الملف", menuItem: "نسخ كمسار" },
+    macos: { action: "⌥ (Option) + النقر بزر الماوس الأيمن على الملف", menuItem: "نسخ \"{file}\" كمسار" },
+    linux: { action: "النقر بزر الماوس الأيمن على الملف", menuItem: "نسخ الموقع" },
   },
   date: { label: "التاريخ" },
   time: { label: "الوقت" },

@@ -26,15 +26,10 @@ const en = {
     getPath: "Get the path:",
   },
   pathTooltip: {
-    windows: {
-      steps: ["Right-click the file", "Copy as path"],
-    },
-    macos: {
-      steps: ["⌥ (Option) + right-click the file", 'Copy "clip.mp4" as Pathname'],
-    },
-    linux: {
-      steps: ["Right-click the file (Nautilus, Dolphin…)", "Copy location"],
-    },
+    howTo: "{action}, then \"{menuItem}\"",
+    windows: { action: "Right-click the file", menuItem: "Copy as path" },
+    macos: { action: "⌥ (Option) + right-click the file", menuItem: "Copy \"{file}\" as Pathname" },
+    linux: { action: "Right-click the file", menuItem: "Copy location" },
   },
   date: { label: "Date" },
   time: { label: "Time" },

@@ -28,15 +28,10 @@ const es: Translation = {
     getPath: "Obtener la ruta:",
   },
   pathTooltip: {
-    windows: {
-      steps: ["Clic derecho en el archivo", "Copiar como ruta de acceso"],
-    },
-    macos: {
-      steps: ["⌥ (Opción) + clic derecho en el archivo", 'Copiar "clip.mp4" como ruta'],
-    },
-    linux: {
-      steps: ["Clic derecho en el archivo (Nautilus, Dolphin…)", "Copiar ubicación"],
-    },
+    howTo: "{action} y luego «{menuItem}»",
+    windows: { action: "Clic derecho en el archivo", menuItem: "Copiar como ruta de acceso" },
+    macos: { action: "⌥ (Opción) + clic derecho en el archivo", menuItem: "Copiar \"{file}\" como nombre de ruta" },
+    linux: { action: "Clic derecho en el archivo", menuItem: "Copiar ubicación" },
   },
   date: { label: "Fecha" },
   time: { label: "Hora" },

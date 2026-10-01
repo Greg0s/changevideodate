@@ -77,7 +77,9 @@ all state lives in `App.tsx` via `useState`.
     `changevideodate.locale`), and `initialLocale()` (stored choice, else browser detection).
   - `locales/<code>.ts` — one file per language, each a `Translation` object with the same shape as the
     canonical `locales/en.ts` (which defines the `Translation` type via `typeof en`). Includes the
-    OS-specific file-path tooltip copy (steps + mimicked context-menu items) that used to live in `os.ts`.
+    OS-specific file-path tooltip copy under `pathTooltip`: a per-locale `howTo` sentence template with
+    `{action}`/`{menuItem}` placeholders, plus an `{ action, menuItem }` pair per OS (the menu item mimics
+    the real context-menu label; macOS's contains a `{file}` placeholder for the file name).
   - `translations.ts` — aggregates all locale files into `getTranslation(locale)`.
   - Adding a language: add an entry to `LANGUAGES`, add `locales/<code>.ts` satisfying `Translation`, and
     register it in `translations.ts`. Adding a UI string: add the key to `locales/en.ts` first (source of
@@ -90,8 +92,9 @@ all state lives in `App.tsx` via `useState`.
   - `ExiftoolInstalledToggle` — the "I already have ExifTool installed" checkbox that suppresses the
     install preamble; rendered next to `OsSelector`.
   - `CommandCard` — renders the generated command with per-segment coloring and a copy-to-clipboard button.
-  - `FilePathField` — file path input plus an OS-specific tooltip (from `t.pathTooltip[os]`) on how to
-    obtain the path.
+  - `FilePathField` — file path input plus an OS-specific tooltip on how to obtain the path: fills
+    `t.pathTooltip.howTo` with `t.pathTooltip[os]` (menu item in bold), substituting `{file}` with the file
+    name from the current path (falling back to the OS default path's file name).
   - `AdvancedOptions` — collapsible panel for tag toggles, UTC/overwrite checkboxes, and GPS lat/lon; when
     "Edit location" is on, also renders `LocationMap` below the lat/lon inputs.
   - `LocationMap` — its own collapsible panel ("Show map"/"Hide map", closed by default) nested inside

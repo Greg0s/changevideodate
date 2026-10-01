@@ -28,15 +28,10 @@ const vi: Translation = {
     getPath: "Lấy đường dẫn:",
   },
   pathTooltip: {
-    windows: {
-      steps: ["Nhấp chuột phải vào tệp", "Sao chép dưới dạng đường dẫn"],
-    },
-    macos: {
-      steps: ["⌥ (Option) + nhấp chuột phải vào tệp", 'Sao chép "clip.mp4" dưới dạng đường dẫn'],
-    },
-    linux: {
-      steps: ["Nhấp chuột phải vào tệp (Nautilus, Dolphin…)", "Sao chép vị trí"],
-    },
+    howTo: "{action}, sau đó chọn \"{menuItem}\"",
+    windows: { action: "Nhấp chuột phải vào tệp", menuItem: "Sao chép dưới dạng đường dẫn" },
+    macos: { action: "⌥ (Option) + nhấp chuột phải vào tệp", menuItem: "Sao chép '{file}' dưới dạng đường dẫn" },
+    linux: { action: "Nhấp chuột phải vào tệp", menuItem: "Sao chép vị trí" },
   },
   date: { label: "Ngày" },
   time: { label: "Giờ" },

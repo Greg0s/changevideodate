@@ -28,15 +28,10 @@ const hi: Translation = {
     getPath: "पथ प्राप्त करें:",
   },
   pathTooltip: {
-    windows: {
-      steps: ["फ़ाइल पर राइट-क्लिक करें", "पथ के रूप में कॉपी करें"],
-    },
-    macos: {
-      steps: ["⌥ (Option) + फ़ाइल पर राइट-क्लिक करें", '"clip.mp4" को पथ नाम के रूप में कॉपी करें'],
-    },
-    linux: {
-      steps: ["फ़ाइल पर राइट-क्लिक करें (Nautilus, Dolphin…)", "स्थान कॉपी करें"],
-    },
+    howTo: "{action}, फिर \"{menuItem}\" चुनें",
+    windows: { action: "फ़ाइल पर राइट-क्लिक करें", menuItem: "पथ के रूप में कॉपी करें" },
+    macos: { action: "⌥ (Option) + फ़ाइल पर राइट-क्लिक करें", menuItem: "'{file}' को पथ नाम के रूप में कॉपी करें" },
+    linux: { action: "फ़ाइल पर राइट-क्लिक करें", menuItem: "स्थान कॉपी करें" },
   },
   date: { label: "तारीख़" },
   time: { label: "समय" },

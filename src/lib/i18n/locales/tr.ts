@@ -28,15 +28,10 @@ const tr: Translation = {
     getPath: "Yolu al:",
   },
   pathTooltip: {
-    windows: {
-      steps: ["Dosyaya sağ tıklayın", "Yol olarak kopyala"],
-    },
-    macos: {
-      steps: ["⌥ (Option) + dosyaya sağ tıklayın", '"clip.mp4" dosyasını Yol Adı olarak kopyala'],
-    },
-    linux: {
-      steps: ["Dosyaya sağ tıklayın (Nautilus, Dolphin…)", "Konumu kopyala"],
-    },
+    howTo: "{action}, ardından \"{menuItem}\" seçeneğini seçin",
+    windows: { action: "Dosyaya sağ tıklayın", menuItem: "Yol olarak kopyala" },
+    macos: { action: "⌥ (Option) + dosyaya sağ tıklayın", menuItem: "'{file}' dosyasını Yol Adı olarak kopyala" },
+    linux: { action: "Dosyaya sağ tıklayın", menuItem: "Konumu kopyala" },
   },
   date: { label: "Tarih" },
   time: { label: "Saat" },

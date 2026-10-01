@@ -28,15 +28,10 @@ const fr: Translation = {
     getPath: "Obtenir le chemin :",
   },
   pathTooltip: {
-    windows: {
-      steps: ["Clic droit sur le fichier", "Copier en tant que chemin d'accès"],
-    },
-    macos: {
-      steps: ["⌥ (Option) + clic droit sur le fichier", 'Copier « clip.mp4 » en tant que chemin'],
-    },
-    linux: {
-      steps: ["Clic droit sur le fichier (Nautilus, Dolphin…)", "Copier l'emplacement"],
-    },
+    howTo: "{action}, puis « {menuItem} »",
+    windows: { action: "Clic droit sur le fichier", menuItem: "Copier en tant que chemin d'accès" },
+    macos: { action: "⌥ (Option) + clic droit sur le fichier", menuItem: "Copier « {file} » en tant que nom de chemin" },
+    linux: { action: "Clic droit sur le fichier", menuItem: "Copier l'emplacement" },
   },
   date: { label: "Date" },
   time: { label: "Heure" },

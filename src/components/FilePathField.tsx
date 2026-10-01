@@ -16,6 +16,7 @@ interface FilePathFieldProps {
 export function FilePathField({ os, value, onChange, theme, t }: FilePathFieldProps) {
   const [tooltipOpen, setTooltipOpen] = useState(false);
   const tip = t.pathTooltip[os];
+  const menuItem = tip.menuItem.replace("{file}", fileName(value) || fileName(defaultPath(os)));
 
   return (
     <div className="sm:col-span-3 relative">
@@ -38,11 +39,19 @@ export function FilePathField({ os, value, onChange, theme, t }: FilePathFieldPr
               <p style={{ color: theme.textMuted }} className="mb-2">
                 {t.filePath.getPath}
               </p>
-              <ol className="list-decimal list-inside space-y-1">
-                {tip.steps.map((s, idx) => (
-                  <li key={idx}>{s}</li>
-                ))}
-              </ol>
+              <p>
+                {t.pathTooltip.howTo.split(/(\{action\}|\{menuItem\})/).map((part, idx) =>
+                  part === "{action}" ? (
+                    tip.action
+                  ) : part === "{menuItem}" ? (
+                    <strong key={idx} className="font-semibold">
+                      {menuItem}
+                    </strong>
+                  ) : (
+                    part
+                  ),
+                )}
+              </p>
             </div>
           )}
         </span>
@@ -60,4 +69,8 @@ export function FilePathField({ os, value, onChange, theme, t }: FilePathFieldPr
       />
     </div>
   );
+}
+
+function fileName(path: string): string {
+  return path.trim().replace(/^["']|["']$/g, "").split(/[\\/]/).pop() ?? "";
 }

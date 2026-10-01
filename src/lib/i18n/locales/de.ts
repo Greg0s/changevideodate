@@ -28,15 +28,10 @@ const de: Translation = {
     getPath: "Pfad ermitteln:",
   },
   pathTooltip: {
-    windows: {
-      steps: ["Rechtsklick auf die Datei", "Als Pfad kopieren"],
-    },
-    macos: {
-      steps: ["⌥ (Option) + Rechtsklick auf die Datei", '„clip.mp4" als Pfadname kopieren'],
-    },
-    linux: {
-      steps: ["Rechtsklick auf die Datei (Nautilus, Dolphin…)", "Ort kopieren"],
-    },
+    howTo: "{action}, dann „{menuItem}“",
+    windows: { action: "Rechtsklick auf die Datei", menuItem: "Als Pfad kopieren" },
+    macos: { action: "⌥ (Option) + Rechtsklick auf die Datei", menuItem: "„{file}“ als Pfadname kopieren" },
+    linux: { action: "Rechtsklick auf die Datei", menuItem: "Ort kopieren" },
   },
   date: { label: "Datum" },
   time: { label: "Uhrzeit" },

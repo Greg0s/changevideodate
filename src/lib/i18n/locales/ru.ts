@@ -28,15 +28,10 @@ const ru: Translation = {
     getPath: "Получить путь:",
   },
   pathTooltip: {
-    windows: {
-      steps: ["Правый клик по файлу", "Копировать как путь"],
-    },
-    macos: {
-      steps: ["⌥ (Option) + правый клик по файлу", 'Скопировать «clip.mp4» как путь'],
-    },
-    linux: {
-      steps: ["Правый клик по файлу (Nautilus, Dolphin…)", "Копировать расположение"],
-    },
+    howTo: "{action}, затем «{menuItem}»",
+    windows: { action: "Правый клик по файлу", menuItem: "Копировать как путь" },
+    macos: { action: "⌥ (Option) + правый клик по файлу", menuItem: "Скопировать \"{file}\" как путь" },
+    linux: { action: "Правый клик по файлу", menuItem: "Копировать расположение" },
   },
   date: { label: "Дата" },
   time: { label: "Время" },
