@@ -45,8 +45,6 @@ const vi: Translation = {
     latitude: "Vĩ độ",
     longitude: "Kinh độ",
     map: {
-      show: "Hiện bản đồ",
-      hide: "Ẩn bản đồ",
       loading: "Đang tải bản đồ…",
       hint: "Nhấp vào bản đồ hoặc kéo điểm đánh dấu để đặt tọa độ. Hiện bản đồ sẽ tải các ô bản đồ (tile) từ OpenStreetMap.",
     },

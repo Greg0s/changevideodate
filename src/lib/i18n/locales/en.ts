@@ -43,8 +43,6 @@ const en = {
     latitude: "Latitude",
     longitude: "Longitude",
     map: {
-      show: "Show map",
-      hide: "Hide map",
       loading: "Loading map…",
       hint: "Click the map or drag the marker to set the coordinates. Loading the map fetches tiles from OpenStreetMap.",
     },

@@ -45,8 +45,6 @@ const it: Translation = {
     latitude: "Latitudine",
     longitude: "Longitudine",
     map: {
-      show: "Mostra mappa",
-      hide: "Nascondi mappa",
       loading: "Caricamento mappa…",
       hint: "Fai clic sulla mappa o trascina il segnaposto per impostare le coordinate. La visualizzazione della mappa carica i tile da OpenStreetMap.",
     },

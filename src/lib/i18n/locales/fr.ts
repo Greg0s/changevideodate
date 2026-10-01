@@ -45,8 +45,6 @@ const fr: Translation = {
     latitude: "Latitude",
     longitude: "Longitude",
     map: {
-      show: "Afficher la carte",
-      hide: "Masquer la carte",
       loading: "Chargement de la carte…",
       hint: "Cliquez sur la carte ou faites glisser le repère pour définir les coordonnées. L'affichage de la carte charge des tuiles depuis OpenStreetMap.",
     },

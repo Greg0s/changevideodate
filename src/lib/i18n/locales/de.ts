@@ -45,8 +45,6 @@ const de: Translation = {
     latitude: "Breitengrad",
     longitude: "Längengrad",
     map: {
-      show: "Karte anzeigen",
-      hide: "Karte ausblenden",
       loading: "Karte wird geladen…",
       hint: "Klicken Sie auf die Karte oder ziehen Sie den Marker, um die Koordinaten festzulegen. Beim Anzeigen der Karte werden Kacheln von OpenStreetMap geladen.",
     },
